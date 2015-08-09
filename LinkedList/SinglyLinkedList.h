@@ -116,3 +116,20 @@ int getListSize(struct singlyNode **head){
         return count;
     }
 }
+
+//Return the nth node from list if present else return NULL
+struct singlyNode* getNodeFromList(struct singlyNode  **head,int n){
+    struct singlyNode *temp=*head;
+    int count=1;
+    
+    while(count<n){
+        if(temp==NULL){
+            printf("%d node does not exists\n",n);
+            return NULL;
+        }
+        temp=temp->next;
+        count++;
+    }
+    
+    return temp;
+}

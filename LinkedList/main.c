@@ -2,8 +2,9 @@
 //#include"SinglyLinkedListTest.h"
 //#include"DoublyLinkedListTest.h"
 //#include"CircularLinkedListTest.h"
-#include"FindNthNodeFromEndTest.h"
+//#include"FindNthNodeFromEndTest.h"
 #include"HashMapTest.h"
+#include"FindCycleInLinkedListTest.h"
 
 int main(int argc, char **argv)
 {
@@ -15,8 +16,10 @@ int main(int argc, char **argv)
    // testFindNthNodeBruteForce();
     //testFinNthNodeHashMapStrategy();
     //testFindNthNodeCountingNodeStrategy();
-    testFindNthNodePointerDifferenceStrategy();
+    //testFindNthNodePointerDifferenceStrategy();
     //testHashMap();
+    
+    testFindWetherListHasCycleHashMapStrategy();
     
     
   
