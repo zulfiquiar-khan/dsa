@@ -104,8 +104,7 @@ void traverseList(struct singlyNode **head){
 int getListSize(struct singlyNode **head){
     int count=0;
     if((head==NULL)||(head!=NULL && *head==NULL)){
-        printf("List is empty\nProgram exited with return code: 0
-");
+        printf("List is empty\n");
         return count;
     }
     else {
