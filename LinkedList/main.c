@@ -20,8 +20,8 @@ int main(int argc, char **argv)
     //testHashMap();
     
     testFindWetherListHasCycleHashMapStrategy();
-    
-    
-  
+    testFindWetherListHasCycleFloydCycleFindingAlgorithm();
+    testFindStartNodeOfLoopFloydCycleFindingAlgorithm();
+    testFindLoopSizeFloydCycleFindingAlgorithm();
 	return 0;
 }
