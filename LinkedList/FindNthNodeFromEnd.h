@@ -128,19 +128,19 @@ struct singlyNode* findNthNodePointerDifferenceStrategy(struct singlyNode **head
         return NULL;
     }
     
-    while(counter<n){
-        if(!fastPtr){fastPtr=fastPtr->next;}
+    while(counter<=n && fastPtr!=NULL){
+        fastPtr=fastPtr->next;
         counter++;
     }
     
+    if(counter<n+1&&fastPtr==NULL){
+        printf("%d mode from the end does not exists\n");
+        return NULL;
+    }
+    
     while(fastPtr!=NULL){
-        if(slowPtr==NULL){slowPtr=*head;}
-        else{
             fastPtr=fastPtr->next;
             slowPtr=slowPtr->next;
-        }
     }
-        if(slowPtr!=NULL)
             return slowPtr;
-        return NULL;
 }

@@ -160,7 +160,7 @@ void testFindNthNodePointerDifferenceStrategy(){
     n=1;
     nthNode=findNthNodePointerDifferenceStrategy(head,n);
     printf("%d node from end is %u and has data %d\n",n,nthNode,nthNode->data);
-    
+
     n=2;
     nthNode=findNthNodePointerDifferenceStrategy(head,n);
     printf("%d node from end is %u and has data %d\n",n,nthNode,nthNode->data);
@@ -177,13 +177,13 @@ void testFindNthNodePointerDifferenceStrategy(){
     nthNode=findNthNodePointerDifferenceStrategy(head,n);
     printf("%d node from end is %u and has data %d\n",n,nthNode,nthNode->data);
     
-    n=6;
+   n=6;
     nthNode=findNthNodePointerDifferenceStrategy(head,n);
     printf("%d node from end is %u and has data %d\n",n,nthNode,nthNode!=NULL?nthNode->data:0);
     
     n=0;
+    
     nthNode=findNthNodePointerDifferenceStrategy(head,n);
     printf("%d node from end is %u and has data %d\n",n,nthNode,nthNode!=NULL?nthNode->data:0);
-    
 
 }
