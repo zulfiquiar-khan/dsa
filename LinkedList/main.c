@@ -25,7 +25,8 @@ int main(int argc, char **argv)
     testFindStartNodeOfLoopFloydCycleFindingAlgorithm();
     testFindLoopSizeFloydCycleFindingAlgorithm();*/
     
-    testInsertNodeInSortedList();
-    
+    //testInsertNodeInSortedList();
+    testreverseListIterativeVersion();
+    //testreverseListRecursiveVersion();
 	return 0;
 }

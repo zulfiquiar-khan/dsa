@@ -28,7 +28,20 @@ struct singlyNode*  reverseListRecursiveVersion(struct singlyNode*head){
         
         secondNode=head->next;
         head->next=NULL;
-        reversedList=reverseList(secondNode);
+        reversedList=reverseListRecursiveVersion(secondNode);
         secondNode->next=head;
         return reversedList;
+}
+
+
+struct singlyNode* reverseListIterativeVersion(struct singlyNode *head){
+    struct singlyNode* temp=NULL;
+    struct singlyNode* nextNode=NULL;
+    while(head!=NULL){
+        nextNode=head->next;
+        head->next=temp;
+        temp=head;
+        head=nextNode;
+    }
+    return temp;
 }

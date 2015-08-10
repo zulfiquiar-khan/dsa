@@ -41,5 +41,31 @@ void testInsertNodeInSortedList(){
     newNode3->data=1;
     newNode3->next=NULL;
     *head=insertNodeInSortedList(*head,newNode3);
-    traverseList(head);
+     traverseList(head);
+}
+
+void testreverseListIterativeVersion(){
+    
+    struct  singlyNode *header;
+    struct singlyNode **head;
+    header=NULL;
+    head=&header;
+    createList(head);
+    
+    *head=reverseListIterativeVersion(*head);
+      traverseList(head);
+
+}
+
+void testreverseListRecursiveVersion(){
+    
+    struct  singlyNode *header;
+    struct   singlyNode **head;
+    header=NULL;
+    head=&header;
+    createList(head);
+    
+    *head=reverseListRecursiveVersion(*head);
+      traverseList(head);
+
 }
