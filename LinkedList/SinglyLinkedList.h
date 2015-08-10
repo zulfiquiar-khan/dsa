@@ -30,6 +30,11 @@ int insert(struct  singlyNode **head,int data,int position){
         return 1;
     }
     
+    if(position>0&&*head==NULL){
+        printf("Position does not exists \n");
+        return 0;
+    }
+    
     while((k<position-1)&&temp!=NULL){
         temp=temp->next;
         k++;

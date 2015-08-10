@@ -3,8 +3,9 @@
 //#include"DoublyLinkedListTest.h"
 //#include"CircularLinkedListTest.h"
 //#include"FindNthNodeFromEndTest.h"
-#include"HashMapTest.h"
-#include"FindCycleInLinkedListTest.h"
+//#include"HashMapTest.h"
+//#include"FindCycleInLinkedListTest.h"
+#include"MiscLinkedListProblemTest.h"
 
 int main(int argc, char **argv)
 {
@@ -19,9 +20,12 @@ int main(int argc, char **argv)
     //testFindNthNodePointerDifferenceStrategy();
     //testHashMap();
     
-    testFindWetherListHasCycleHashMapStrategy();
+/* testFindWetherListHasCycleHashMapStrategy();
     testFindWetherListHasCycleFloydCycleFindingAlgorithm();
     testFindStartNodeOfLoopFloydCycleFindingAlgorithm();
-    testFindLoopSizeFloydCycleFindingAlgorithm();
+    testFindLoopSizeFloydCycleFindingAlgorithm();*/
+    
+    testInsertNodeInSortedList();
+    
 	return 0;
 }
