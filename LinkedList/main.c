@@ -35,6 +35,7 @@ int main(int argc, char **argv)
     //testFindMergingPointHashTableStrategy();
     //testFindMergingPointStackStrategy();
     //testFindMergingPointEfficientApproach();
-    testFindMiddleNodeBruteForce();
+    //testFindMiddleNodeBruteForce();
+    testFindMiddleNodeTraverseStrategy();
 	return 0;
 }

@@ -27,3 +27,26 @@ struct singlyNode* findMiddleNodeBruteForce(struct singlyNode** head){
     
     return midNode;
 }
+
+struct singlyNode* findMiddleNodeTraverseStrategy(struct singlyNode** head){
+    struct singlyNode* temp=*head;
+    struct singlyNode* midNode=NULL;
+    int count=1;
+    int node=0;
+    while(temp->next!=NULL){
+        temp=temp->next;
+        count++;
+    }
+    if(count%2==0){
+        node=count/2;
+    }
+    else{node=count/2+1;}
+    int k=1;
+    temp=*head;
+    while(k<node){
+        k++;
+        temp=temp->next;
+    }
+    return temp;
+
+}
