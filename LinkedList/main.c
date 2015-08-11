@@ -5,7 +5,8 @@
 //#include"FindNthNodeFromEndTest.h"
 //#include"HashMapTest.h"
 //#include"FindCycleInLinkedListTest.h"
-#include"MiscLinkedListProblemTest.h"
+//#include"MiscLinkedListProblemTest.h"
+#include"FindMergingNodeInMultipleListTest.h"
 
 int main(int argc, char **argv)
 {
@@ -26,7 +27,11 @@ int main(int argc, char **argv)
     testFindLoopSizeFloydCycleFindingAlgorithm();*/
     
     //testInsertNodeInSortedList();
-    testreverseListIterativeVersion();
+    //testreverseListIterativeVersion();
     //testreverseListRecursiveVersion();
+    
+    //testFindMergingPointBruteForce();
+    //testFindMergingPointHashTableStrategy();
+    testFindMergingPointStackStrategy();
 	return 0;
 }

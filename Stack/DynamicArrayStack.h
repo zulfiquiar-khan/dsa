@@ -14,7 +14,7 @@ struct Stack* createStack(){
 	malloc(sizeof(struct Stack));
 	if(!S){return NULL;}
 	S->top=-1;
-	S->capacity=1;
+	S->capacity=20;
 	S->array=(int *)malloc(S->capacity*sizeof(int));
 	if(!S->array){return NULL;}
 	return S;
@@ -23,7 +23,13 @@ struct Stack* createStack(){
 //Doubles the size of stack
 void doubleStack(struct Stack *S){
 	S->capacity*=2;
-	S=(struct Stack*)realloc(S->array,S->capacity);
+	int* array=realloc(S->array,S->capacity);
+    if(array!=NULL){
+        free(S->array);
+        S->array=array;
+    }else{
+        printf("Unable to resize\n");
+    }
 }
 
 //Adds an element to the stack if space is left ...  return 1 if success
