@@ -78,3 +78,41 @@ struct singlyNode* findMergingPointStackStrategy(struct singlyNode** list1,struc
     
     return mergingNode;
 }
+
+
+struct singlyNode* findMergingPointEfficientApproach(struct singlyNode** list1,struct singlyNode** list2){
+    struct singlyNode* temp1=NULL;
+    struct singlyNode* temp2=NULL;
+    struct singlyNode* mergingNode=NULL;
+    
+    int list1Size=getListSize(list1);
+    int list2Size=getListSize(list2);
+    int diff=list1Size-list2Size;
+    
+    if(diff<0){
+        temp1=*list2;
+        temp2=*list1;
+    }else{
+        temp1=*list1;
+        temp2=*list2;
+    }
+    int k=1;
+    while(k<=diff){
+        temp1=temp1->next;
+        k++;
+    }
+    
+    while(1){
+        if(temp1==NULL || temp2==NULL){
+            break;
+        }
+        if(temp1==temp2){
+            mergingNode=temp1;
+            break;
+        }
+        temp1=temp1->next;
+        temp2=temp2->next;
+    }
+
+    return mergingNode;
+}

@@ -89,3 +89,24 @@ void testFindMergingPointStackStrategy(){
 }
 
 
+
+void testFindMergingPointEfficientApproach(){
+    struct  singlyNode *header1;
+    struct singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+    
+    struct  singlyNode *header2;
+    struct singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+
+    createMergingList(head1,head2);
+    
+
+    struct singlyNode* mergingNode=findMergingPointEfficientApproach(head1,head2);
+    printf("Merging node is %u->%d\n",mergingNode,mergingNode!=NULL?mergingNode->data:0);
+
+}
+
+
