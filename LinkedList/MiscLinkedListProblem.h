@@ -45,3 +45,13 @@ struct singlyNode* reverseListIterativeVersion(struct singlyNode *head){
     }
     return temp;
 }
+
+
+void traverseLinkedListFromEndToStart(struct singlyNode* head){
+    struct singlyNode* temp=head;
+    if(head==NULL){
+        return ;
+    }
+    traverseLinkedListFromEndToStart(temp->next);
+    printf("%u->%d \n",temp,temp->data);
+}

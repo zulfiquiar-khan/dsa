@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"SinglyLinkedList.h"
-
+#include"HashMap.h"
 
 struct singlyNode* findMiddleNodeBruteForce(struct singlyNode** head){
     struct singlyNode* temp=*head;
@@ -50,3 +50,62 @@ struct singlyNode* findMiddleNodeTraverseStrategy(struct singlyNode** head){
     return temp;
 
 }
+
+
+struct  singlyNode* findMiddleNodeHashMapStrategy(struct singlyNode** head){
+    hashmap* map=hashmapCreate(20);
+    struct singlyNode* temp=*head;
+    struct singlyNode* midNode=NULL;
+    int counter=0;
+    int mid=0;
+    while(temp!=NULL){
+        counter++;
+        hashmapInsert(map,temp,counter);
+        temp=temp->next;
+    }
+    
+    if(counter==0){
+        return NULL;
+    }
+        if(counter%2==0){
+            mid=counter/2;
+        }else{
+            mid=1+counter/2;
+        }
+        
+        midNode=hashmapGet(map,mid);
+        
+    return midNode;
+
+}
+
+struct singlyNode* findMiddleNodeSingleScanStrategy(struct singlyNode** head){
+    struct singlyNode* slowPtr=*head;
+    struct singlyNode* fastPtr=*head;
+    
+    if(head==NULL||*head==NULL){
+        return NULL;
+    }
+    
+    while(fastPtr->next!=NULL){
+        fastPtr=fastPtr->next;
+        if(fastPtr->next!=NULL){
+            slowPtr=slowPtr->next;
+            fastPtr=fastPtr->next;
+            }
+    }
+    
+    return slowPtr;
+}
+
+
+
+
+
+
+
+
+
+
+
+

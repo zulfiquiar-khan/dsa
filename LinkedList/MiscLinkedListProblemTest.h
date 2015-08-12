@@ -69,3 +69,13 @@ void testreverseListRecursiveVersion(){
       traverseList(head);
 
 }
+
+
+void testTraverseLinkedListFromEndToStart(){
+    struct  singlyNode *header;
+    struct   singlyNode **head;
+    header=NULL;
+    head=&header;
+    createList(head);
+    traverseLinkedListFromEndToStart(*head);
+}
