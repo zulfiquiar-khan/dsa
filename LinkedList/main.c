@@ -31,7 +31,9 @@ int main(int argc, char **argv)
     //testreverseListIterativeVersion();
     //testreverseListRecursiveVersion();
     //testTraverseLinkedListFromEndToStart();
-        
+    //testFindWetherListIsEvenOrOdd();
+       testMergeTwoSortedListInSortedOrderIterative();
+ 
     //testFindMergingPointBruteForce();
     //testFindMergingPointHashTableStrategy();
     //testFindMergingPointStackStrategy();

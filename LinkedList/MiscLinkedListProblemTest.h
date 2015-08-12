@@ -9,11 +9,30 @@ void createList(struct singlyNode **head){
     insert(head,4,2);
     insert(head,5,3);
     insert(head,6,4);
+    //insert(head,6,4);
     
     traverseList(head);
     
     printf("Size : %d\n",getListSize(head));
     
+}
+
+void createTwoSortedeLinkedList(struct singlyNode** head1,struct singlyNode** head2){
+    insert(head1,1,1); 
+    insert(head1,4,2);
+    insert(head1,5,3);
+    insert(head1,7,4);
+    insert(head1,9,5);
+    insert(head1,10,6);
+    insert(head1,11,7);
+    
+    insert(head2,2,1); 
+    insert(head2,3,2);
+    insert(head2,6,3);
+    insert(head2,8,4);
+    
+    traverseList(head1);
+    traverseList(head2);
 }
 
 void testInsertNodeInSortedList(){
@@ -78,4 +97,38 @@ void testTraverseLinkedListFromEndToStart(){
     head=&header;
     createList(head);
     traverseLinkedListFromEndToStart(*head);
+}
+
+
+
+void testFindWetherListIsEvenOrOdd(){
+    struct  singlyNode *header;
+    struct   singlyNode **head;
+    header=NULL;
+    head=&header;
+    createList(head);
+    int result=findWetherListIsEvenOrOdd(head);
+    if(result==0){printf("Odd\n");}
+    else{printf("Even\n");}
+}
+
+
+void testMergeTwoSortedListInSortedOrderIterative(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+    
+    createTwoSortedeLinkedList(head1,head2);
+    
+    struct singlyNode** newMergedList=mergeTwoSortedListInSortedOrderIterative(head1,head2);
+    
+    traverseList(newMergedList);
+    
 }
