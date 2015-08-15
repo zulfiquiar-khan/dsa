@@ -27,3 +27,40 @@ void splitCircularLinkedListInHalf(struct circularNode** head,struct circularNod
     slowPtr->next=*head1;
     fastPtr->next=*head2;
 }
+
+
+struct circularNode* josephusCircle(){
+    int m;
+    int n;
+    printf("Enter total number of candidates : ");
+    scanf("%d",&n);
+    printf("Enter M : ");
+    scanf("%d",&m);
+    
+    struct circularNode* p=(struct circularNode* )malloc(sizeof(struct circularNode));
+    p->data=1;
+    struct circularNode* q=p;
+    int i=2;
+    for(;i<=n;i++){
+        p->next=(struct circularNode* )malloc(sizeof(struct circularNode));
+        p->next->data=i;
+        p=p->next;
+    }
+    p->next=q;
+    printf("Circular List at the start : ");
+    traverseList(&q);
+
+    int j=0;
+    p=q;
+    for(i=1;i<n;i++){
+            for(j=0;j<m-1;j++){
+                    p=p->next;
+            }
+             printf("\np is at %d \n",p->data);
+            traverseList(&p);
+            p->next=p->next->next;
+            p=p->next;
+            traverseList(&p);
+    }
+        return p;
+}

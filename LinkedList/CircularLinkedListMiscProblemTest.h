@@ -1,3 +1,4 @@
+#include<stdlib.h>
 #include"CircularLinkedListMIscProblem.h"
 
 
@@ -65,4 +66,13 @@ void testSplitCircularLinkedListInHalf(){
     traverseList(head2_2);
     
     
+}
+
+
+void testJosephusCircle(){
+            
+        struct circularNode* winner=NULL;
+        winner=josephusCircle();
+        printf("Winner is : %u->%d \n",winner,winner->data);
+
 }
