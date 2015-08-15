@@ -24,7 +24,7 @@ void createTwoSortedeLinkedList(struct singlyNode** head1,struct singlyNode** he
     insert(head1,4,4);
     insert(head1,5,5);
     insert(head1,6,6);
-   // insert(head1,7,7);
+    insert(head1,7,7);
     
     insert(head2,1,1); 
     insert(head2,2,2);
@@ -221,7 +221,7 @@ void testCheckIfAlistIsPalindrome(){
 
 void testReverseBolckOfKNodesInLinkedList(){
     
-        struct  singlyNode *header1;
+    struct  singlyNode *header1;
     struct   singlyNode **head1;
     header1=NULL;
     head1=&header1;
@@ -234,8 +234,10 @@ void testReverseBolckOfKNodesInLinkedList(){
  
     createTwoSortedeLinkedList(head1,head2);
     traverseList(head1);
-    reverseBolckOfKNodesInLinkedList(head1,2);
+    *head1=reverseBlockofNodesInLinkedList(head1,4);
     traverseList(head1);
+
+    
     //traverseList(head2);
    // reverseBolckOfKNodesInLinkedList(head2,2);
     //traverseList(head2);

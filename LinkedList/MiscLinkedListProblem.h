@@ -234,3 +234,40 @@ int hasKNodes(struct singlyNode* head,int k){
     return 0;
 }
 
+struct singlyNode* reverseBlockofNodesInLinkedList(struct singlyNode** head,int k ){
+    struct  singlyNode* temp;
+    struct  singlyNode* curr=*head;
+    struct  singlyNode* newHead;
+    struct  singlyNode* before=NULL;
+    struct  singlyNode* next;
+    
+    if(k==0||k==1){
+        return *head;
+    }
+    if(!hasKNodes(curr,k)){
+        return *head;
+    }
+    else {
+            newHead=getKPlusOnethNode(curr,k-1);
+    }
+    
+    while(curr!=NULL && hasKNodes(curr,k)){
+            temp=getKPlusOnethNode(curr,k);
+            int i=0;
+            while(i<k){
+                    next=curr->next;
+                    curr->next=temp;
+                    temp=curr;
+                    curr=next;
+                    i++;
+
+            }
+            if(before!=NULL){
+                before->next=temp;
+            }
+              before=getKPlusOnethNode(temp,k-1);
+            traverseList(&newHead);
+    }
+    
+    return newHead;
+}
