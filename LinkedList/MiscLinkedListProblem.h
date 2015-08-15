@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"SinglyLinkedList.h"
-
+//#include"CircularLinkedList.h"
 
 struct singlyNode*  insertNodeInSortedList(struct singlyNode *head,struct singlyNode* newNode){
     struct singlyNode *current=head,*temp=NULL;
@@ -107,3 +107,130 @@ struct singlyNode** mergeTwoSortedListInSortedOrderIterative(struct singlyNode**
     
     return &temp;
 }
+
+
+struct singlyNode* mergeTwoSortedListInSortedOrderRecursive(struct singlyNode* a,struct singlyNode* b){
+    struct  singlyNode* result=NULL;
+    if(a==NULL){return b;}
+    if(b==NULL){return a;}
+    if(a->data<=b->data){
+        result=a;
+        result->next=mergeTwoSortedListInSortedOrderRecursive(a->next,b);
+    }
+    else {
+        result=b;
+        result->next=mergeTwoSortedListInSortedOrderRecursive(a,b->next);
+    }
+
+    return result;
+}
+
+struct  singlyNode*  reverseLinkedListInPairsRecursive(struct singlyNode* head){
+    struct singlyNode* temp=head;
+    if(temp==NULL){
+        return NULL;
+    }
+    if(temp->next==NULL){
+        return temp;
+    }
+    
+    temp=temp->next;
+    head->next=temp->next;
+    temp->next=head;
+    head=temp;
+
+    head->next->next=reverseLinkedListInPairsRecursive(head->next->next);
+    
+    return head;
+
+}
+
+
+struct singlyNode* reverseLinkedListInPairsIterative(struct singlyNode **head){
+    struct singlyNode* temp1=NULL;
+    struct singlyNode* temp2=NULL;
+    struct singlyNode* current=*head;
+    
+    while(current!=NULL && current->next!=NULL){
+        if(temp1!=NULL){
+            temp1->next->next=current->next;
+        }
+        
+        temp1=current->next;
+        current->next=current->next->next;
+        temp1->next=current;
+        current=current->next;
+        
+        if(temp2==NULL){
+            temp2=temp1;
+        }
+    }
+            return temp2;
+    }
+
+int checkIfAlistIsPalindrome(struct singlyNode** head){
+    
+    struct singlyNode* fastPtr=*head;
+    struct singlyNode* slowPtr=*head;
+     struct singlyNode* list1=*head;
+    struct singlyNode* list2=NULL;
+    while(fastPtr->next!=NULL&&fastPtr->next->next!=NULL){
+        fastPtr=fastPtr->next->next;
+        slowPtr=slowPtr->next;
+    }
+                printf("%d \n",slowPtr->data);
+                list2=slowPtr->next;
+                list2=reverseListIterativeVersion(list2);
+                slowPtr->next=list2;
+                slowPtr=slowPtr->next;
+
+                int flag=1;
+                
+                printf("%d \n",slowPtr->data);
+                
+                traverseList(&list1);
+                traverseList(&list2);
+                
+                while(list1!=NULL&&list2!=NULL&&list1!=slowPtr){
+                    printf("list1 : %d list2 : %d\n",list1->data,list2->data);
+                        if(list1->data!=list2->data){
+                            flag=0;
+                            break;
+                        }
+                        list1=list1->next;
+                        list2=list2->next;
+                        printf("list1 test : %d   list2 test : %d\n",list1!=slowPtr,list2!=NULL);
+                }
+                
+                return flag;
+}
+
+
+struct singlyNode** getKPlusOnethNode(struct singlyNode* head,int k){
+    struct singlyNode* kthNode=head;
+    int i=1;
+    
+    while(kthNode!=NULL && i<k){
+            kthNode=kthNode->next;
+            i++;
+    }
+    
+    if(kthNode!=NULL){
+        return kthNode->next;
+    }
+    return NULL;
+}
+
+int hasKNodes(struct singlyNode* head,int k){
+    struct singlyNode* temp=head;
+    int i=1;
+    while(temp!=NULL && i<k){
+            temp=temp->next;
+            i++;
+    }
+    if(temp!=NULL && i==k){
+            return 1;
+    }
+    return 0;
+}
+

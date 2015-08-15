@@ -79,7 +79,7 @@ struct  singlyNode* findMiddleNodeHashMapStrategy(struct singlyNode** head){
 
 }
 
-struct singlyNode* findMiddleNodeSingleScanStrategy(struct singlyNode** head){
+    struct singlyNode* findMiddleNodeSingleScanStrategy(struct singlyNode** head){
     struct singlyNode* slowPtr=*head;
     struct singlyNode* fastPtr=*head;
     

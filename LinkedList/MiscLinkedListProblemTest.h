@@ -19,20 +19,18 @@ void createList(struct singlyNode **head){
 
 void createTwoSortedeLinkedList(struct singlyNode** head1,struct singlyNode** head2){
     insert(head1,1,1); 
-    insert(head1,4,2);
-    insert(head1,5,3);
-    insert(head1,7,4);
-    insert(head1,9,5);
-    insert(head1,10,6);
-    insert(head1,11,7);
+    insert(head1,2,2);
+    insert(head1,3,3);
+    insert(head1,4,4);
+    insert(head1,5,5);
+    insert(head1,6,6);
+   // insert(head1,7,7);
     
-    insert(head2,2,1); 
-    insert(head2,3,2);
-    insert(head2,6,3);
-    insert(head2,8,4);
+    insert(head2,1,1); 
+    insert(head2,2,2);
+    insert(head2,3,3);
+    insert(head2,4,4);
     
-    traverseList(head1);
-    traverseList(head2);
 }
 
 void testInsertNodeInSortedList(){
@@ -130,5 +128,116 @@ void testMergeTwoSortedListInSortedOrderIterative(){
     struct singlyNode** newMergedList=mergeTwoSortedListInSortedOrderIterative(head1,head2);
     
     traverseList(newMergedList);
+    
+}
+
+void testMergeTwoSortedListInSortedOrderRecursive(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+    
+    createTwoSortedeLinkedList(head1,head2);
+    
+    struct singlyNode* newMergedList=mergeTwoSortedListInSortedOrderRecursive(*head1,*head2);
+    
+    traverseList(&newMergedList);
+    
+}
+
+void testReverseLinkedListInPairsRecursive(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+    
+    createTwoSortedeLinkedList(head1,head2);
+    
+    
+    struct singlyNode* list1=reverseLinkedListInPairsRecursive(*head1);
+    traverseList(&list1);
+    list1=reverseLinkedListInPairsRecursive(*head2);
+    traverseList(&list1);
+    
+}
+
+
+
+void testReverseLinkedListInPairsIterative(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+    
+    createTwoSortedeLinkedList(head1,head2);
+    
+    
+    struct singlyNode* list1=reverseLinkedListInPairsIterative(head1);
+    traverseList(&list1);
+    list1=reverseLinkedListInPairsIterative(head2);
+    traverseList(&list1);
+    
+}
+
+void testCheckIfAlistIsPalindrome(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+   
+ 
+    createTwoSortedeLinkedList(head1,head2);
+
+    
+    printf("Is Palindrome : %d \n",checkIfAlistIsPalindrome(head1));
+    printf("Is Palindrome : %d\n",checkIfAlistIsPalindrome(head2));
+    
+}
+
+
+void testReverseBolckOfKNodesInLinkedList(){
+    
+        struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+ 
+    struct  singlyNode *header2;
+    struct   singlyNode **head2;
+    header2=NULL;
+    head2=&header2;
+   
+ 
+    createTwoSortedeLinkedList(head1,head2);
+    traverseList(head1);
+    reverseBolckOfKNodesInLinkedList(head1,2);
+    traverseList(head1);
+    //traverseList(head2);
+   // reverseBolckOfKNodesInLinkedList(head2,2);
+    //traverseList(head2);
     
 }

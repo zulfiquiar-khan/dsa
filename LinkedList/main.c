@@ -8,6 +8,7 @@
 #include"MiscLinkedListProblemTest.h"
 //#include"FindMergingNodeInMultipleListTest.h"
 //#include"FindMiddleNodeInLinkedListTest.h"
+//#include"CircularLinkedListMiscProblemTest.h"
 
 int main(int argc, char **argv)
 {
@@ -32,8 +33,15 @@ int main(int argc, char **argv)
     //testreverseListRecursiveVersion();
     //testTraverseLinkedListFromEndToStart();
     //testFindWetherListIsEvenOrOdd();
-       testMergeTwoSortedListInSortedOrderIterative();
- 
+    //testMergeTwoSortedListInSortedOrderIterative();
+    //testMergeTwoSortedListInSortedOrderRecursive();
+    //testReverseLinkedListInPairsRecursive();
+    //testReverseLinkedListInPairsIterative();
+    
+    //testSplitCircularLinkedListInHalf();
+   // testCheckIfAlistIsPalindrome();
+        testReverseBolckOfKNodesInLinkedList();
+        
     //testFindMergingPointBruteForce();
     //testFindMergingPointHashTableStrategy();
     //testFindMergingPointStackStrategy();
@@ -45,3 +53,5 @@ int main(int argc, char **argv)
   //testFindMiddleNodeSingleScanStrategy();
 	return 0;
 }
+
+
