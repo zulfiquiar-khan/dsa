@@ -8,7 +8,8 @@
 //#include"MiscLinkedListProblemTest.h"
 //#include"FindMergingNodeInMultipleListTest.h"
 //#include"FindMiddleNodeInLinkedListTest.h"
-#include"CircularLinkedListMiscProblemTest.h"
+//#include"CircularLinkedListMiscProblemTest.h"
+#include"CloningLinkedListTest.h"
 
 int main(int argc, char **argv)
 {
@@ -41,7 +42,9 @@ int main(int argc, char **argv)
     //testSplitCircularLinkedListInHalf();
    // testCheckIfAlistIsPalindrome();
     //testReverseBolckOfKNodesInLinkedList();
-        testJosephusCircle();
+    //testJosephusCircle();
+    
+    testCloneHashMapStrategy();
 
  
     //testFindMergingPointBruteForce();
