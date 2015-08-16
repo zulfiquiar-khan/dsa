@@ -44,8 +44,8 @@ int main(int argc, char **argv)
     //testReverseBolckOfKNodesInLinkedList();
     //testJosephusCircle();
     
-    testCloneHashMapStrategy();
-
+   // testCloneHashMapStrategy();
+    testCloneTraverseStrategy();
  
     //testFindMergingPointBruteForce();
     //testFindMergingPointHashTableStrategy();

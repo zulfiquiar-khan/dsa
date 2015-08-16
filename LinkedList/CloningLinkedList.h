@@ -44,3 +44,42 @@ struct randomNode* cloneHashMapStrategy(struct randomNode* head){
 }
 
 
+
+struct randomNode* cloneTraverseStrategy(struct randomNode* head){
+    struct randomNode* temp=head;
+    struct randomNode* temp1=NULL;
+    struct randomNode* cloneList=NULL;
+    while(temp!=NULL){
+        temp1=(struct randomNode*)malloc(sizeof(struct randomNode*));
+        if(cloneList==NULL){cloneList=temp1;}
+        temp1->data=temp->data;
+        temp1->next=temp->random;
+        temp1->random=NULL;
+        temp->random=temp1;
+        
+        temp=temp->next;
+    }
+    
+    temp=head;
+    while(temp!=NULL){  
+        temp1=temp->random;
+        temp1->random=temp1->next->random;
+        temp=temp->next;
+    }
+        
+    temp=head;
+    while(temp!=NULL){
+        temp1=temp->random;
+        temp->random=temp1->next;
+        if(temp->next!=NULL){
+            temp1->next=temp->next->random;
+        }
+        else {
+            temp1->next=temp->next;
+        }
+        temp=temp->next;
+    }
+    
+    return cloneList;
+}
+

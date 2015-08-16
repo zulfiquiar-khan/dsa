@@ -10,3 +10,12 @@ void testCloneHashMapStrategy(){
     traverseRandomList(&head1);
     
 }
+
+void testCloneTraverseStrategy(){
+    
+    struct randomNode** head=createRandomList();
+      struct randomNode* head1;
+    head1=cloneTraverseStrategy(*head);
+    traverseRandomList(&head1);
+    
+}
