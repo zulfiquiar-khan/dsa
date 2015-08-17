@@ -271,3 +271,22 @@ struct singlyNode* reverseBlockofNodesInLinkedList(struct singlyNode** head,int 
     
     return newHead;
 }
+
+
+struct singlyNode* findLastModularNodeFromStart(struct singlyNode* head,int k){
+    struct singlyNode* modularNode=NULL;
+    if(head==NULL || k<=0){
+        return NULL;
+    }
+    
+    int i=1;
+    
+    while(head!=NULL){
+        if(i%k==0){modularNode=head;}
+        head=head->next;
+        i++;
+    }
+    
+    return modularNode;
+
+}

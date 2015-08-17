@@ -5,11 +5,16 @@
 
 void createList(struct singlyNode **head){
     
-    insert(head,2,1); 
-    insert(head,4,2);
-    insert(head,5,3);
-    insert(head,6,4);
-    //insert(head,6,4);
+    insert(head,1,1); 
+    insert(head,2,2);
+    insert(head,3,3);
+    insert(head,4,4);
+    insert(head,5,5);
+    insert(head,6,6); 
+    insert(head,7,7);
+    insert(head,8,8);
+    insert(head,9,9);
+    insert(head,10,10);
     
     traverseList(head);
     
@@ -242,4 +247,31 @@ void testReverseBolckOfKNodesInLinkedList(){
    // reverseBolckOfKNodesInLinkedList(head2,2);
     //traverseList(head2);
     
+}
+
+
+void testFindLastModularNodeFromStart(){
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+    
+    createList(head1);
+    struct singlyNode* modularNode=NULL;
+    modularNode=findLastModularNodeFromStart(*head1,3);
+    printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
+
+
+    modularNode=findLastModularNodeFromStart(*head1,1);
+    printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
+
+    modularNode=findLastModularNodeFromStart(*head1,0);
+    printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
+
+    modularNode=findLastModularNodeFromStart(*head1,5);
+    printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
+
+    modularNode=findLastModularNodeFromStart(*head1,4);
+    printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
+
 }

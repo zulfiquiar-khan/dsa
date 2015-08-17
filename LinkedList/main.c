@@ -5,7 +5,7 @@
 //#include"FindNthNodeFromEndTest.h"
 //#include"HashMapTest.h"
 //#include"FindCycleInLinkedListTest.h"
-//#include"MiscLinkedListProblemTest.h"
+#include"MiscLinkedListProblemTest.h"
 //#include"FindMergingNodeInMultipleListTest.h"
 //#include"FindMiddleNodeInLinkedListTest.h"
 //#include"CircularLinkedListMiscProblemTest.h"
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
     //testJosephusCircle();
     
    // testCloneHashMapStrategy();
-    testCloneTraverseStrategy();
+    //testCloneTraverseStrategy();
  
     //testFindMergingPointBruteForce();
     //testFindMergingPointHashTableStrategy();
@@ -56,6 +56,9 @@ int main(int argc, char **argv)
    // testFindMiddleNodeTraverseStrategy();
   // testFindMiddleNodeHashMapStrategy();
   //testFindMiddleNodeSingleScanStrategy();
+
+    testFindLastModularNodeFromStart();
+    
 	return 0;
 }
 
