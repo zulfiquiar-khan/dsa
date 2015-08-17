@@ -275,3 +275,31 @@ void testFindLastModularNodeFromStart(){
     printf("Modular Node is : %u->%d\n",modularNode,modularNode!=NULL?modularNode->data:0);
 
 }
+
+
+void testFindFractionalNode(){
+    
+        struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+    
+    createList(head1);
+    struct singlyNode* fractionalNode=NULL;
+    fractionalNode=findFractionalNode(*head1,3);
+    printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
+
+
+    fractionalNode=findFractionalNode(*head1,1);
+    printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
+
+    fractionalNode=findFractionalNode(*head1,0);
+    printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
+
+    fractionalNode=findFractionalNode(*head1,5);
+    printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
+
+    fractionalNode=findFractionalNode(*head1,4);
+    printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
+
+}

@@ -290,3 +290,29 @@ struct singlyNode* findLastModularNodeFromStart(struct singlyNode* head,int k){
     return modularNode;
 
 }
+
+
+struct singlyNode* findFractionalNode(struct singlyNode* head,int k){
+    struct singlyNode* fractionalNode=NULL;
+    int i=0;
+    if(k<=0){
+        return NULL;
+    }
+    while(head!=NULL){
+        printf("i : %d  k: %d  head : %d\n",i,k,head->data);
+        if(i%k==0){
+            if(fractionalNode==NULL){
+                printf("fractional node : %d\n",head->data);
+                fractionalNode=head;
+            }
+            else{
+                fractionalNode=fractionalNode->next;
+                printf("moved fractional node : %d\n",fractionalNode->data);
+            }
+        }
+        head=head->next;
+        i++;
+    }
+    return fractionalNode;
+}
+
