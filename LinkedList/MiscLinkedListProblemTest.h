@@ -303,3 +303,19 @@ void testFindFractionalNode(){
     printf("Modular Node is : %u->%d\n",fractionalNode,fractionalNode!=NULL?fractionalNode->data:0);
 
 }
+
+void testFindSquareRootNodeInList(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+    
+    createList(head1);
+    struct singlyNode* sqrtNode=NULL;
+    sqrtNode=findSquareRootNodeInList(*head1);
+    printf("Modular Node is : %u->%d\n",sqrtNode,sqrtNode!=NULL?sqrtNode->data:0);
+
+
+    
+}

@@ -316,3 +316,25 @@ struct singlyNode* findFractionalNode(struct singlyNode* head,int k){
     return fractionalNode;
 }
 
+struct singlyNode* findSquareRootNodeInList(struct singlyNode* head){
+    struct singlyNode* sqrtNode=NULL;
+    int i=1,j=1;
+    
+    while(head!=NULL){
+        printf("i : %d  j: %d  head : %d \n",i,j,head->data);
+        if(i==j*j){
+            if(sqrtNode==NULL){
+                sqrtNode=head;
+                printf("sqrt : %d\n",sqrtNode->data);
+        }
+            else{
+                sqrtNode=sqrtNode->next;
+                printf("moved sqrt : %d\n",sqrtNode->data);
+            }
+            j++;
+        }
+        i++;
+        head=head->next;
+    }
+    return sqrtNode;
+}

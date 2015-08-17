@@ -58,7 +58,9 @@ int main(int argc, char **argv)
   //testFindMiddleNodeSingleScanStrategy();
 
     //testFindLastModularNodeFromStart();
-    testFindFractionalNode();
+    //testFindFractionalNode();
+    testFindSquareRootNodeInList();
+    
 	return 0;
 }
 
