@@ -338,3 +338,37 @@ struct singlyNode* findSquareRootNodeInList(struct singlyNode* head){
     }
     return sqrtNode;
 }
+
+
+struct singlyNode* mergeTwoSortedList(struct singlyNode* head1,struct  singlyNode* head2){
+    struct singlyNode* temp=NULL;
+    struct singlyNode* newNode=(struct singlyNode*)malloc(sizeof(struct singlyNode*));
+    temp=newNode;
+    
+    while(head1!=NULL && head2!=NULL){
+        if(head1->data<=head2->data){
+                temp->next=head1;
+                head1=head1->next;
+                temp=temp->next;
+        }
+        else{
+                temp->next=head2;
+                head2=head2->next;
+                temp=temp->next;
+        }
+    }
+    
+    if(head1==NULL){
+        temp->next=head2;
+    }
+    else if(head2==NULL){
+        temp->next=head1;
+    }
+    
+    temp=newNode->next;
+    newNode->next=NULL;
+    free(newNode);
+    
+    return temp;
+
+}

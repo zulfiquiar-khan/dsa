@@ -9,7 +9,7 @@
 //#include"FindMergingNodeInMultipleListTest.h"
 //#include"FindMiddleNodeInLinkedListTest.h"
 //#include"CircularLinkedListMiscProblemTest.h"
-#include"CloningLinkedListTest.h"
+//#include"CloningLinkedListTest.h"
 
 int main(int argc, char **argv)
 {
@@ -59,8 +59,9 @@ int main(int argc, char **argv)
 
     //testFindLastModularNodeFromStart();
     //testFindFractionalNode();
-    testFindSquareRootNodeInList();
+    //testFindSquareRootNodeInList();
     
+    testMergeTwoSortedList();
 	return 0;
 }
 
