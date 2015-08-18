@@ -342,3 +342,18 @@ void testMergeTwoSortedList(){
     traverseList(&mergedList);
     
 }
+
+void testEvenBeforeOdd(){
+    
+    struct  singlyNode *header1;
+    struct   singlyNode **head1;
+    header1=NULL;
+    head1=&header1;
+    
+    createList(head1);
+    
+    struct singlyNode* resultList=evenBeforeOdd(*head1);
+    printf("done\n");
+    traverseList(&resultList);
+
+}

@@ -61,7 +61,8 @@ int main(int argc, char **argv)
     //testFindFractionalNode();
     //testFindSquareRootNodeInList();
     
-    testMergeTwoSortedList();
+    //testMergeTwoSortedList();
+    testEvenBeforeOdd();
 	return 0;
 }
 

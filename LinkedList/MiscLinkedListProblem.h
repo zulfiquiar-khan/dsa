@@ -372,3 +372,44 @@ struct singlyNode* mergeTwoSortedList(struct singlyNode* head1,struct  singlyNod
     return temp;
 
 }
+
+struct singlyNode*  evenBeforeOdd(struct singlyNode* head){
+    
+    struct singlyNode* evenList=NULL;
+    struct singlyNode* evenListEnd=NULL;
+    struct singlyNode* oddList=NULL;
+    struct singlyNode* oddListEnd=NULL;
+    struct singlyNode* temp=head;
+    
+    if(head==NULL){
+        return NULL;
+    }
+    
+    while(temp!=NULL){
+        if(temp->data%2==0){
+            if(evenList==NULL){
+                evenList=evenListEnd=temp;
+            }
+            else {
+                evenListEnd->next=temp;
+                evenListEnd=temp;
+            }
+        }
+        else {
+            if(oddList==NULL){
+                oddList=oddListEnd=temp;
+            }
+            else{
+                oddListEnd->next=temp;
+                oddListEnd=temp;
+            }
+        }
+        
+        temp=temp->next;
+    }
+    
+    evenListEnd->next=oddList;
+    oddListEnd->next=NULL;
+
+    return evenList;
+}
