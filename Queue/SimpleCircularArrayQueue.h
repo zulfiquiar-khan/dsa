@@ -32,7 +32,7 @@ int isEmptySimpleQueue(struct SimpleQueue* queue){
 }
 
 int isFullSimpleQueue(struct SimpleQueue* queue){
-    return ((queue->rear+1)%queue->capacity==queue->front)
+    return ((queue->rear+1)%queue->capacity==queue->front);
 }
 
 
@@ -46,7 +46,7 @@ void enqueueSimpleQueue(struct SimpleQueue* queue,int data){
     }
     else {
         queue->rear=(queue->rear+1)%queue->capacity;
-        queue->rear=data;
+        queue->array[queue->rear]=data;
         if(queue->front==-1){
             queue->front=queue->rear;
         }
@@ -60,7 +60,7 @@ int dequeueSimpleQueue(struct SimpleQueue* queue){
             return 0;
         }
         
-        int data=queue->front;
+        int data=queue->array[queue->front];
         if(queue->front==queue->rear){
             queue->front=queue->rear=-1;
         }
@@ -78,4 +78,19 @@ void deleteSimpleQueue(struct SimpleQueue* queue){
         free(queue);
     }
     
+}
+
+void displaySimpleQueue(struct SimpleQueue*  queue){
+    int i=0;
+    if(queue==NULL||queue->array==NULL){
+        printf("Queue is empty\n");
+    }
+    else {
+        printf("Queue rear : %d  front :  %d  data : ",queue->rear,queue->front);
+        while(i<queue->capacity){
+            printf(" %d ",queue->array[i]);
+            i++;
+        }
+        printf("\n");
+    }
 }
