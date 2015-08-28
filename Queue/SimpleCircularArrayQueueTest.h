@@ -13,7 +13,7 @@ void testSimpleQueue(){
     enqueueSimpleQueue(queue,5);
     displaySimpleQueue(queue);
     dequeueSimpleQueue(queue);
-    deleteSimpleQueue(queue);
+    dequeueSimpleQueue(queue);
     displaySimpleQueue(queue);
     enqueueSimpleQueue(queue,6);
     enqueueSimpleQueue(queue,6);

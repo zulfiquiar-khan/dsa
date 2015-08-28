@@ -65,7 +65,9 @@ int dequeueSimpleQueue(struct SimpleQueue* queue){
             queue->front=queue->rear=-1;
         }
         else{
-            queue->front=(queue->front+1)%queue->capacity;
+           // printf("front : %d front+1 : %d front man : %d ",queue->front,queue->front+1,((queue->front)+1)%queue->capacity);
+            queue->front=((queue->front)+1)%queue->capacity;
+            //printf("front : %d \n",queue->front);
         }
         
 }
