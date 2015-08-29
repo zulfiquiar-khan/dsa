@@ -1,10 +1,11 @@
-#include<stdio.h>
 //#include"SimpleCircularArrayQueueTest.h"
-#include"DynamicCircularArrayQueueTest.h"
+//#include"DynamicCircularArrayQueueTest.h"
+#include"LinkedListQueueTest.h"
+
 int main(){
     
     //testSimpleQueue();
-    testDynamicQueue();
-    
+    //testDynamicQueue();
+    testLinkedQueue();
     return 0;
 }
