@@ -20,3 +20,5 @@ void reverseAqueueUsingStack(struct SimpleQueue* queue){
         enqueueSimpleQueue(queue,data);
     }
 }
+
+

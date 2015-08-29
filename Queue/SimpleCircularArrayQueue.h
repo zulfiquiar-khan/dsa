@@ -6,9 +6,9 @@ struct SimpleQueue{
     int rear;
     int front;
     int capacity;
-    int *array;
-    
+    int *array;    
 };
+
 
 struct SimpleQueue* createSimpleQueue(int size){
             struct SimpleQueue* queue=(struct SimpleQueue*)malloc(sizeof(struct SimpleQueue));
@@ -81,6 +81,7 @@ void deleteSimpleQueue(struct SimpleQueue* queue){
     }
     
 }
+
 
 void displaySimpleQueue(struct SimpleQueue*  queue){
     int i=0;
