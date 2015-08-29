@@ -1,9 +1,10 @@
 #include<stdio.h>
-#include"SimpleCircularArrayQueueTest.h"
-
+//#include"SimpleCircularArrayQueueTest.h"
+#include"DynamicCircularArrayQueueTest.h"
 int main(){
     
-    testSimpleQueue();
+    //testSimpleQueue();
+    testDynamicQueue();
     
     return 0;
 }

@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 struct SimpleQueue{
     int rear;
     int front;
@@ -50,7 +51,6 @@ void enqueueSimpleQueue(struct SimpleQueue* queue,int data){
         if(queue->front==-1){
             queue->front=queue->rear;
         }
-        
     }
 }
 
