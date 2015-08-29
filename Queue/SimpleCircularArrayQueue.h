@@ -69,7 +69,7 @@ int dequeueSimpleQueue(struct SimpleQueue* queue){
             queue->front=((queue->front)+1)%queue->capacity;
             //printf("front : %d \n",queue->front);
         }
-        
+        return data;
 }
 
 void deleteSimpleQueue(struct SimpleQueue* queue){

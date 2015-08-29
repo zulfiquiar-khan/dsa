@@ -63,6 +63,7 @@ int dequeueLinkedQueue(struct LinkedQueue* queue){
     return data;
 }
 
+
 void deleteLinkedQueue(struct LinkedQueue* queue){
         struct QueueNode* temp=queue->front;
         struct QueueNode* temp2=NULL;
