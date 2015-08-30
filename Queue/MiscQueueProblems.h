@@ -21,4 +21,19 @@ void reverseAqueueUsingStack(struct SimpleQueue* queue){
     }
 }
 
+void copyQueueToStackWithFrontAtTop(struct SimpleQueue* queue,struct Stack* stack){
+    
+    while(!isEmptySimpleQueue(queue)){
+        push(stack,dequeueSimpleQueue(queue));
+    }
+    while(!isEmptyStack(stack)){
+        enqueueSimpleQueue(queue,pop(stack));
+    }
+    
+    while(!isEmptySimpleQueue(queue)){
+        push(stack,dequeueSimpleQueue(queue));
+    }
+
+}
+
 

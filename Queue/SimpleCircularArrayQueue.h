@@ -27,7 +27,6 @@ struct SimpleQueue* createSimpleQueue(int size){
             return queue;
 }
 
-
 int isEmptySimpleQueue(struct SimpleQueue* queue){
     return (queue->front==-1);
 }
@@ -35,7 +34,6 @@ int isEmptySimpleQueue(struct SimpleQueue* queue){
 int isFullSimpleQueue(struct SimpleQueue* queue){
     return ((queue->rear+1)%queue->capacity==queue->front);
 }
-
 
 int sizeSimpleQueue(struct SimpleQueue* queue){
     return (queue->capacity-queue->front+queue->rear+1)%queue->capacity;
