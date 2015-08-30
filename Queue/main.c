@@ -1,9 +1,10 @@
 //#include"SimpleCircularArrayQueueTest.h"
 //#include"DynamicCircularArrayQueueTest.h"
 //#include"LinkedListQueueTest.h"
-#include"MiscQueueProblemsTest.h"
+//#include"MiscQueueProblemsTest.h"
 //#include"QueueUsingTwoStacksTest.h"
 //#include"StackUsingTwoqueuesTest.h"
+#include"DoublyEndedQueueTest.h"
 
 int main(){
     
@@ -13,7 +14,8 @@ int main(){
    // testReverseQueueUsingStack();
     //testQueueUsingTwoStacks();
     //testStackUsingTwoQueues();
-    testCopyQueueToStackWithFrontAtTop();
-    
+    //testCopyQueueToStackWithFrontAtTop();
+    testDoublyEndedQueue();
+
     return 0;
 }
