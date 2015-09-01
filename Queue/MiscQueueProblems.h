@@ -37,3 +37,36 @@ void copyQueueToStackWithFrontAtTop(struct SimpleQueue* queue,struct Stack* stac
 }
 
 
+int findPairWiseStack(struct Stack* stack){
+    if(isEmptyStack(stack)){
+        printf("Stack is Empty\n");
+        return -1;
+    }
+    struct SimpleQueue* queue=createSimpleQueue(size(stack));
+    int pairWiseFlag=1;
+    if(queue==NULL){
+        printf("Error creating queue\n");
+        return -1;
+    }
+    while(!isEmptyStack(stack)){
+        enqueueSimpleQueue(queue,pop(stack));
+    }
+    while(!isEmptySimpleQueue(queue)){
+        push(stack,dequeueSimpleQueue(queue));
+    }
+    while(!isEmptyStack(stack)){
+        int n=pop(stack);
+        enqueueSimpleQueue(queue,n);
+        if(!isEmptyStack(stack)){
+            int p=pop(stack);
+            if(abs(n-p)!=1){
+                pairWiseFlag=0;
+            }
+        }
+    }
+    while(!isEmptySimpleQueue(queue)){
+        push(stack,dequeueSimpleQueue(queue));
+    }
+    
+    return pairWiseFlag;
+}
