@@ -17,7 +17,8 @@ int main(){
     //testCopyQueueToStackWithFrontAtTop();
     //testDoublyEndedQueue();
     //testFindPairWiseStack();
-    testInterleaveTwoHalfsOfQueue();
+    //testInterleaveTwoHalfsOfQueue();
+    testReverseFirstKelementsOfQueue();
     
     return 0;
 }

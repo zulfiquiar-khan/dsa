@@ -101,3 +101,25 @@ void interleaveTwoHalfsOfQueue(struct SimpleQueue* queue,int  size){
         enqueueSimpleQueue(queue,dequeueSimpleQueue(queue));
     }
 }
+
+void reverseFirstKelementsInQueue(struct SimpleQueue* queue,int size,int k){
+    if(queue==NULL||k>size){
+        return;
+    }
+    
+    struct Stack* stack=createStack();
+    int i=0;
+    while(i<k){
+        push(stack,dequeueSimpleQueue(queue));
+        i++;
+    }
+    while(!isEmptyStack(stack)){
+        enqueueSimpleQueue(queue,pop(stack));
+    }
+    i=0;
+    while(i<(size-k)){
+        enqueueSimpleQueue(queue,dequeueSimpleQueue(queue));
+        i++;
+ }
+    
+}

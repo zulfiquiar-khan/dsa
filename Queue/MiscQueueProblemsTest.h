@@ -61,3 +61,18 @@ void testInterleaveTwoHalfsOfQueue(){
 
     displaySimpleQueue(queue);
 }
+
+void testReverseFirstKelementsOfQueue(){
+    struct SimpleQueue* queue=createSimpleQueue(6);
+    enqueueSimpleQueue(queue,1);
+    enqueueSimpleQueue(queue,2);
+    enqueueSimpleQueue(queue,3);
+    enqueueSimpleQueue(queue,4);
+    enqueueSimpleQueue(queue,5);
+    enqueueSimpleQueue(queue,6);
+    
+    reverseFirstKelementsInQueue(queue,6,3);
+
+    displaySimpleQueue(queue);
+
+}

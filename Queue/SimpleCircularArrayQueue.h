@@ -36,7 +36,7 @@ int isFullSimpleQueue(struct SimpleQueue* queue){
 }
 
 int sizeSimpleQueue(struct SimpleQueue* queue){
-    return (queue->capacity-queue->front+queue->rear+1)%queue->capacity;
+    return (((queue->capacity)-(queue->front))+(queue->rear)+1)%queue->capacity;
 }
 
 void enqueueSimpleQueue(struct SimpleQueue* queue,int data){
