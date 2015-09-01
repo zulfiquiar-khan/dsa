@@ -47,3 +47,17 @@ void testFindPairWiseStack(){
 
     printf("%d ",findPairWiseStack(stack));
 }
+
+void testInterleaveTwoHalfsOfQueue(){
+    struct SimpleQueue* queue=createSimpleQueue(6);
+    enqueueSimpleQueue(queue,1);
+    enqueueSimpleQueue(queue,2);
+    enqueueSimpleQueue(queue,3);
+    enqueueSimpleQueue(queue,4);
+    enqueueSimpleQueue(queue,5);
+    enqueueSimpleQueue(queue,6);
+    
+    interleaveTwoHalfsOfQueue(queue,6);
+
+    displaySimpleQueue(queue);
+}

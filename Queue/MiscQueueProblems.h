@@ -70,3 +70,34 @@ int findPairWiseStack(struct Stack* stack){
     
     return pairWiseFlag;
 }
+
+void interleaveTwoHalfsOfQueue(struct SimpleQueue* queue,int  size){
+    if(queue==NULL||size%2!=0){
+        return ;
+    }
+    
+    int halfSize=size/2;
+    int i=0;
+    struct Stack* stack=createStack();
+    while(i<halfSize){
+        push(stack,dequeueSimpleQueue(queue));
+        i++;
+    }
+    while(!isEmptyStack(stack)){
+        enqueueSimpleQueue(queue,pop(stack));
+    }
+    i=0;
+    while(i<halfSize){
+        enqueueSimpleQueue(queue,dequeueSimpleQueue(queue));
+        i++;
+    }
+    i=0;
+    while(i<halfSize){
+        push(stack,dequeueSimpleQueue(queue));
+        i++;
+    }
+    while(!isEmptyStack(stack)){
+        enqueueSimpleQueue(queue,pop(stack));
+        enqueueSimpleQueue(queue,dequeueSimpleQueue(queue));
+    }
+}
