@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include"LinkedBinaryTree.h"
+#include"LinkedBinaryTreeTest.h"
 
 int main(int argc, char **argv)
 {
-	node* binaryTree=createBinaryTree(7);
+
+    testCreateBinaryTree();
 	return 0;
 }

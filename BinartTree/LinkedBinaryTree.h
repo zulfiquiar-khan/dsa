@@ -72,3 +72,4 @@ void insert(node* root,int data,int flag){
         }
     }
 }
+
