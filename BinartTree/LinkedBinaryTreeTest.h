@@ -10,3 +10,10 @@ void testPreOrderTraversalRecursive(){
     preOrderTraversalRecursive(root);
     printf("\n");
 }
+
+void testPreOrderTraversalIterative(){
+    node* root=createBinaryTree(7);
+    printf("PreOreder : ");
+    preOrderTraversalIterative(root);
+    printf("\n");
+}

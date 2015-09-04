@@ -1,4 +1,5 @@
 #include<stdlib.h>
+#include"../Stack/DynamicArrayStack.h"
 
 struct BinaryTreeNode{
     int data;
@@ -78,5 +79,23 @@ void preOrderTraversalRecursive(node* root){
         printf("%d ",root->data);
         preOrderTraversalRecursive(root->left);
         preOrderTraversalRecursive(root->right);
+    }
+}
+
+void preOrderTraversalIterative(node* root){
+    struct Stack* stack=NULL;
+    if(root!=NULL){
+        stack=createStack();
+        while(1){
+            while(root!=NULL){
+                printf("%d ",root->data);
+                push(stack,root);
+                root=root->left;
+            }
+            if(isEmptyStack(stack))break;
+                root=pop(stack);
+                root=root->right;
+        }
+        deleteStack(stack);
     }
 }
