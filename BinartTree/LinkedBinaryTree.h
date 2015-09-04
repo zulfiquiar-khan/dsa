@@ -125,3 +125,13 @@ void inOrderTraversalIterative(node* root){
         deleteStack(stack);
     }    
 }
+
+void postOrderTraversalRecursive(node* root){
+    if(root!=NULL){
+        postOrderTraversalRecursive(root->left);
+        postOrderTraversalRecursive(root->right);
+        printf("%d ",root->data);
+    }
+}
+
+

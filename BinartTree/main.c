@@ -7,7 +7,8 @@ int main(int argc, char **argv)
     //testPreOrderTraversalRecursive();
 	//testPreOrderTraversalIterative();
     //testInOrderTraversalRecursive();
-    testInOrderTraversalIterative();
+    //testInOrderTraversalIterative();
+    testPostOrderTraversalRecursive();
     
     return 0;
 }

@@ -33,3 +33,10 @@ void testInOrderTraversalIterative(){
     inOrderTraversalIterative(root);
     printf("\n");
 }
+
+void testPostOrderTraversalRecursive(){
+    node* root=createBinaryTree(7);
+    printf("PostOrder : ");
+    postOrderTraversalRecursive(root);
+    printf("\n");
+}
