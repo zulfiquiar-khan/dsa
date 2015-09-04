@@ -108,3 +108,20 @@ void inOrderTraversalRecursive(node* root){
     }
 }
 
+void inOrderTraversalIterative(node* root){
+    struct Stack* stack=NULL;
+    if(root!=NULL){
+        stack=createStack();
+        while(1){
+            while(root!=NULL){
+                push(stack,root);
+                root=root->left;
+            }
+            if(isEmptyStack(stack))break;
+                root=pop(stack);
+                printf("%d ",root->data);
+                root=root->right;
+        }
+        deleteStack(stack);
+    }    
+}

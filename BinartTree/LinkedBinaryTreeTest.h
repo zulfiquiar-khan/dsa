@@ -6,14 +6,14 @@ void testCreateBinaryTree(){
 
 void testPreOrderTraversalRecursive(){
     node* root=createBinaryTree(7);
-    printf("PreOreder : ");
+    printf("PreOrder : ");
     preOrderTraversalRecursive(root);
     printf("\n");
 }
 
 void testPreOrderTraversalIterative(){
     node* root=createBinaryTree(7);
-    printf("PreOreder : ");
+    printf("PreOrder : ");
     preOrderTraversalIterative(root);
     printf("\n");
 }
@@ -21,7 +21,15 @@ void testPreOrderTraversalIterative(){
 
 void testInOrderTraversalRecursive(){
     node* root=createBinaryTree(7);
-    printf("PreOreder : ");
-    inOrderTraversalRecursive(root);
+    printf("InOrder : ");
+   inOrderTraversalRecursive(root);
+    printf("\n");
+}
+
+
+void testInOrderTraversalIterative(){
+    node* root=createBinaryTree(7);
+    printf("InOrder : ");
+    inOrderTraversalIterative(root);
     printf("\n");
 }

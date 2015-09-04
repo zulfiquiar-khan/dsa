@@ -6,7 +6,8 @@ int main(int argc, char **argv)
     //testCreateBinaryTree();
     //testPreOrderTraversalRecursive();
 	//testPreOrderTraversalIterative();
-    testInOrderTraversalRecursive();
+    //testInOrderTraversalRecursive();
+    testInOrderTraversalIterative();
     
     return 0;
 }
