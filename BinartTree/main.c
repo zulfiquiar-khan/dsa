@@ -3,6 +3,7 @@
 int main(int argc, char **argv)
 {
 
-    testCreateBinaryTree();
+    //testCreateBinaryTree();
+    testPreOrderTraversalRecursive();
 	return 0;
 }

@@ -73,3 +73,10 @@ void insert(node* root,int data,int flag){
     }
 }
 
+void preOrderTraversalRecursive(node* root){
+    if(root!=NULL){
+        printf("%d ",root->data);
+        preOrderTraversalRecursive(root->left);
+        preOrderTraversalRecursive(root->right);
+    }
+}
