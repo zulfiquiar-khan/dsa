@@ -99,3 +99,12 @@ void preOrderTraversalIterative(node* root){
         deleteStack(stack);
     }
 }
+
+void inOrderTraversalRecursive(node* root){
+    if(root!=NULL){
+        inOrderTraversalRecursive(root->left);
+        printf("%d ",root->data);
+        inOrderTraversalRecursive(root->right);
+    }
+}
+

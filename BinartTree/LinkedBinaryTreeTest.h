@@ -17,3 +17,11 @@ void testPreOrderTraversalIterative(){
     preOrderTraversalIterative(root);
     printf("\n");
 }
+
+
+void testInOrderTraversalRecursive(){
+    node* root=createBinaryTree(7);
+    printf("PreOreder : ");
+    inOrderTraversalRecursive(root);
+    printf("\n");
+}
