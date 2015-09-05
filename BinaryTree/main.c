@@ -10,7 +10,8 @@ int main(int argc, char **argv)
     //testInOrderTraversalIterative();
     //testPostOrderTraversalRecursive();
     //testPostOrderTraversalIterative();
-    testLevelOrderTraversalIteartive();
+    //testLevelOrderTraversalIteartive();
+    testFindMaxInBinaryTree();
     
     return 0;
 }

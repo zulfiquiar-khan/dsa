@@ -186,3 +186,22 @@ void levelOrderTraversalIteartive(node* root){
     deleteLinkedQueue(queue);
 }
 
+int findMaxInBinaryTree(node* root ){
+if(root==NULL){
+        return 0;
+    }
+    
+    int root_data=root->data;
+    int left_max=0;
+    int right_max=0;
+    int max=0;
+    
+    left_max=findMaxInBinaryTree(root->left);
+    right_max=findMaxInBinaryTree(root->right);
+    
+    if(left_max>right_max){max=left_max;}
+    else{max=right_max;}
+    if(root_data>max){max=root_data;}
+    
+    return max;
+}

@@ -54,3 +54,8 @@ void testLevelOrderTraversalIteartive(){
     levelOrderTraversalIteartive(root);
     printf("\n");
 }
+
+void testFindMaxInBinaryTree(){
+    node* root=createBinaryTree(7);
+    printf("Max : %d\n",findMaxInBinaryTree(root));
+}
