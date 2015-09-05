@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Data Structures" Database="" SWTLW="No">
+  <Project Name="Stack" Path="Stack/Stack.project" Active="No"/>
+  <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
+  <Project Name="Recursion" Path="Recursion/Recursion.project" Active="No"/>
+  <Project Name="LinkedList" Path="LinkedList/LinkedList.project" Active="No"/>
+  <Project Name="BinaryTree" Path="BinaryTree/BinaryTree.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="Stack" ConfigName="Debug"/>
+      <Project Name="dskjal" ConfigName="Debug"/>
+      <Project Name="Queue" ConfigName="Debug"/>
+      <Project Name="Recursion" ConfigName="Debug"/>
+      <Project Name="LinkedList" ConfigName="Debug"/>
+      <Project Name="BinaryTree" ConfigName="Debug"/>
+      <Project Name="BinaryTree" ConfigName="Debug"/>
+      <Project Name="BinaryTree" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="Stack" ConfigName="Release"/>
+      <Project Name="dskjal" ConfigName="Release"/>
+      <Project Name="Queue" ConfigName="Release"/>
+      <Project Name="Recursion" ConfigName="Release"/>
+      <Project Name="LinkedList" ConfigName="Release"/>
+      <Project Name="BinaryTree" ConfigName="Release"/>
+      <Project Name="BinaryTree" ConfigName="Release"/>
+      <Project Name="BinaryTree" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

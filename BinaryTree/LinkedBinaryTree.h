@@ -1,5 +1,6 @@
 #include<stdlib.h>
 #include"../Stack/DynamicArrayStack.h"
+#include"../Queue/LinkedListQueue.h"
 
 struct BinaryTreeNode{
     int data;
@@ -165,4 +166,23 @@ void postOrderTraversalIterative(node* root){
     
 }
 
+
+void levelOrderTraversalIteartive(node* root){
+    if(root==NULL){
+        return;
+    }
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=(node*) dequeueLinkedQueue(queue);
+        printf("%d ",root->data);
+        if(root->left!=NULL){
+            enqueueLinkedQueue(queue,root->left);
+        }
+        if(root->right!=NULL){
+            enqueueLinkedQueue(queue,root->right);
+        }
+    }
+    deleteLinkedQueue(queue);
+}
 

@@ -47,3 +47,10 @@ void testPostOrderTraversalIterative(){
     postOrderTraversalIterative(root);
     printf("\n");
 }
+
+void testLevelOrderTraversalIteartive(){
+    node* root=createBinaryTree(7);
+    printf("Level Order : ");
+    levelOrderTraversalIteartive(root);
+    printf("\n");
+}

@@ -9,7 +9,8 @@ int main(int argc, char **argv)
     //testInOrderTraversalRecursive();
     //testInOrderTraversalIterative();
     //testPostOrderTraversalRecursive();
-    testPostOrderTraversalIterative();
+    //testPostOrderTraversalIterative();
+    testLevelOrderTraversalIteartive();
     
     return 0;
 }
