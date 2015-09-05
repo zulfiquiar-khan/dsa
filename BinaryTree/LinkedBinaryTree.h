@@ -205,3 +205,26 @@ if(root==NULL){
     
     return max;
 }
+
+int findMaxInBinaryTreeIterative(node* root){
+    if(root==NULL){
+        return;
+    }
+    int max=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=(node*) dequeueLinkedQueue(queue);
+        if(root->data>max){
+            max=root->data;
+        }
+        if(root->left!=NULL){
+            enqueueLinkedQueue(queue,root->left);
+        }
+        if(root->right!=NULL){
+            enqueueLinkedQueue(queue,root->right);
+        }
+    }
+    deleteLinkedQueue(queue);
+    return max;
+}

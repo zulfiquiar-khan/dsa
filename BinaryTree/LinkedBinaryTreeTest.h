@@ -59,3 +59,9 @@ void testFindMaxInBinaryTree(){
     node* root=createBinaryTree(7);
     printf("Max : %d\n",findMaxInBinaryTree(root));
 }
+
+void testFindMaxInBinaryTreeIterative(){
+    node* root=createBinaryTree(7);
+    printf("Max : %d\n",findMaxInBinaryTreeIterative(root));
+}
+
