@@ -249,3 +249,26 @@ node* searchInBinaryTreeRecursive(node* root,int data){
     }
     return temp;
 }
+
+node* searchInBinaryTreeIterative(node* root,int data){
+    if(root==NULL){
+        return root;
+    }
+    node* result=NULL;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        node* temp=dequeueLinkedQueue(queue);
+        if(temp->data==data){
+            result=temp;
+            return result;
+        }
+        if(temp->left!=NULL){
+            enqueueLinkedQueue(queue,temp->left);
+        }
+        if(temp->right!=NULL){
+            enqueueLinkedQueue(queue,temp->right);
+        }
+    }
+    return result;
+}
