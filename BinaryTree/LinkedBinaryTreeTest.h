@@ -118,3 +118,9 @@ void testSizeOfBinaryTreeIterative(){
     printf("\n");
     printf("Size : %d ",sizeOfBinaryTreeIterative(root));
 }
+
+
+void testLevelOrderTraversalInReverse(){
+    node* root=createBinaryTree(7);
+    levelOrderTraversalInReverse(root);
+}

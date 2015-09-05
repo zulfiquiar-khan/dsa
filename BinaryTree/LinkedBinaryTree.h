@@ -337,3 +337,28 @@ int sizeOfBinaryTreeIterative(node* root){
     deleteLinkedQueue(queue);
     return size;
 }
+
+void levelOrderTraversalInReverse(node* root){
+    if(root==NULL){
+        return;
+    }
+    struct Stack* stack=createStack();
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+        if(root->right!=NULL){
+            enqueueLinkedQueue(queue,root->right);
+        }
+        if(root->left!=NULL){
+            enqueueLinkedQueue(queue,root->left);
+        }
+        push(stack,root);
+    }
+    printf("Level order in reverse : ");
+    while(!isEmptyStack(stack)){
+        root=pop(stack);
+        printf("%d ",root->data);
+    }
+    printf("\n");
+}
