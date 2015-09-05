@@ -92,3 +92,12 @@ void testSearchInBinaryTreeIterative(){
     (found==NULL)?printf("Not found\n"):printf("Found : %u->%d\n",found,found->data);
 }
 
+void testInsertNodeIntoBinaryTree(){
+    node* root=createBinaryTree(7);
+    printf("\n");
+    levelOrderTraversalIteartive(root);
+ printf("\n");   
+ insertNodeIntoBinaryTree(root,8);
+    levelOrderTraversalIteartive(root);
+     printf("\n");
+}

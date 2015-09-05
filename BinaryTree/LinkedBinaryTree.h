@@ -272,3 +272,39 @@ node* searchInBinaryTreeIterative(node* root,int data){
     }
     return result;
 }
+
+
+void insertNodeIntoBinaryTree(node* root,int data){
+    if(root==NULL){
+        return;
+    }
+    node* newNode=(node*)malloc(sizeof(node));
+    newNode->data=data;
+    newNode->left=NULL;
+    newNode->right=NULL;
+    if(newNode==NULL){
+        printf("Memory error\n");
+        return NULL;
+    }
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        node* temp=dequeueLinkedQueue(queue);
+        if(temp->left==NULL){
+            temp->left=newNode;
+            deleteLinkedQueue(queue);
+            return;
+        }
+        else{
+            enqueueLinkedQueue(queue,temp->left);
+        }
+        if(temp->right==NULL){
+            temp->right=newNode;
+            deleteLinkedQueue(queue);
+            return;
+        }
+        else{
+            enqueueLinkedQueue(queue,temp->right);
+        }
+    }
+}

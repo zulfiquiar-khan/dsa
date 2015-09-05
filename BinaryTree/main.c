@@ -14,7 +14,8 @@ int main(int argc, char **argv)
     //testFindMaxInBinaryTree();
     //testFindMaxInBinaryTreeIterative();
     //testSearchInBinaryTreeRecursive();
-    testSearchInBinaryTreeIterative();
+    //testSearchInBinaryTreeIterative();g
+    testInsertNodeIntoBinaryTree();
     
     return 0;
 }
