@@ -316,3 +316,24 @@ int sizeOfBinaryTreeRecursive(node* root){
     }
     return (sizeOfBinaryTreeRecursive(root->left)+1+sizeOfBinaryTreeRecursive(root->right)) ;
 }
+
+int sizeOfBinaryTreeIterative(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int size=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+        size++;
+        if(root->left!=NULL){
+            enqueueLinkedQueue(queue,root->left);
+        }
+        if(root->right!=NULL){
+            enqueueLinkedQueue(queue,root->right);
+        }
+    }
+    deleteLinkedQueue(queue);
+    return size;
+}

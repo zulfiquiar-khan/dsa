@@ -109,3 +109,12 @@ void testSizeOfBinaryTreeRecursive(){
     printf("\n");
     printf("Size : %d ",sizeOfBinaryTreeRecursive(root));
 }
+
+
+void testSizeOfBinaryTreeIterative(){
+    node* root=createBinaryTree(7);
+    printf("\n");
+    levelOrderTraversalIteartive(root);
+    printf("\n");
+    printf("Size : %d ",sizeOfBinaryTreeIterative(root));
+}
