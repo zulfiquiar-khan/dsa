@@ -308,3 +308,11 @@ void insertNodeIntoBinaryTree(node* root,int data){
         }
     }
 }
+
+
+int sizeOfBinaryTreeRecursive(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    return (sizeOfBinaryTreeRecursive(root->left)+1+sizeOfBinaryTreeRecursive(root->right)) ;
+}

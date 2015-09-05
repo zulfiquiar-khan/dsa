@@ -101,3 +101,11 @@ void testInsertNodeIntoBinaryTree(){
     levelOrderTraversalIteartive(root);
      printf("\n");
 }
+
+void testSizeOfBinaryTreeRecursive(){
+    node* root=createBinaryTree(7);
+    printf("\n");
+    levelOrderTraversalIteartive(root);
+    printf("\n");
+    printf("Size : %d ",sizeOfBinaryTreeRecursive(root));
+}
