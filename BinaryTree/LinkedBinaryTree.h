@@ -228,3 +228,24 @@ int findMaxInBinaryTreeIterative(node* root){
     deleteLinkedQueue(queue);
     return max;
 }
+
+node* searchInBinaryTreeRecursive(node* root,int data){
+    node* temp=NULL;
+    if(root==NULL){
+        return root;
+    }
+    if(root->data==data){
+        return root;
+    }
+    else{
+            temp=searchInBinaryTreeRecursive(root->left,data);
+            if(temp!=NULL){
+                return temp;
+            }
+            temp=searchInBinaryTreeRecursive(root->right,data);
+            if(temp!=NULL){
+                return temp;
+            }
+    }
+    return temp;
+}

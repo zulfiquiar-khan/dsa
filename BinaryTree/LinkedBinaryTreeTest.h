@@ -65,3 +65,15 @@ void testFindMaxInBinaryTreeIterative(){
     printf("Max : %d\n",findMaxInBinaryTreeIterative(root));
 }
 
+void testSearchInBinaryTreeRecursive(){
+    node* root=createBinaryTree(7);
+    int data=7;
+    node* found=NULL;
+    printf("Trying to find %d\n",data);
+    found=searchInBinaryTreeRecursive(root,data);
+    (found==NULL)?printf("Not found\n"):printf("Found : %u->%d\n",found,found->data);
+    data=10;
+    printf("Trying to find %d\n",data);
+    found=searchInBinaryTreeRecursive(root,data);
+    (found==NULL)?printf("Not found\n"):printf("Found : %u->%d\n",found,found->data);
+}

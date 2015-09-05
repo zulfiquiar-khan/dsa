@@ -12,7 +12,8 @@ int main(int argc, char **argv)
     //testPostOrderTraversalIterative();
     //testLevelOrderTraversalIteartive();
     //testFindMaxInBinaryTree();
-    testFindMaxInBinaryTreeIterative();
+    //testFindMaxInBinaryTreeIterative();
+    testSearchInBinaryTreeRecursive();
     
     return 0;
 }
