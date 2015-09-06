@@ -515,3 +515,14 @@ int noOfHalfNodesInBinaryTree(node* root){
     deleteLinkedQueue(queue);
     return count;
 }
+
+int isStructurallyIdentical(node* root1,node* root2){
+    if(root1==NULL&&root2==NULL){
+        return 1;
+    }
+    else if(root1==NULL||root2==NULL){
+        return 0;
+    }
+    return(isStructurallyIdentical(root1->left,root2->left)&&isStructurallyIdentical(root1->right,root2->right));
+}
+

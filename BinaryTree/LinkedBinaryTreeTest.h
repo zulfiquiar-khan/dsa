@@ -18,14 +18,12 @@ void testPreOrderTraversalIterative(){
     printf("\n");
 }
 
-
 void testInOrderTraversalRecursive(){
     node* root=createBinaryTree(7);
     printf("InOrder : ");
    inOrderTraversalRecursive(root);
     printf("\n");
 }
-
 
 void testInOrderTraversalIterative(){
     node* root=createBinaryTree(7);
@@ -110,7 +108,6 @@ void testSizeOfBinaryTreeRecursive(){
     printf("Size : %d ",sizeOfBinaryTreeRecursive(root));
 }
 
-
 void testSizeOfBinaryTreeIterative(){
     node* root=createBinaryTree(7);
     printf("\n");
@@ -118,7 +115,6 @@ void testSizeOfBinaryTreeIterative(){
     printf("\n");
     printf("Size : %d ",sizeOfBinaryTreeIterative(root));
 }
-
 
 void testLevelOrderTraversalInReverse(){
     node* root=createBinaryTree(7);
@@ -151,7 +147,6 @@ void testNoOfLeafNodesInBinaryTree(){
     printf("No Of Leaf Nodes : %d ",noOfLeafNodesInBinaryTree(root));
 }
 
-
 void testNoOfFullNodesInBinaryTree(){
     node* root=createBinaryTree(7);
     printf("No Of Full Nodes : %d ",noOfFullNodesInBinaryTree(root));
@@ -160,4 +155,14 @@ void testNoOfFullNodesInBinaryTree(){
 void testNoOfHalfNodesInBinaryTree(){
     node* root=createBinaryTree(5);
     printf("No Of Half Nodes : %d ",noOfHalfNodesInBinaryTree(root));
+}
+
+void testIsStructurallyIdentical(){
+    node* root1=createBinaryTree(7);
+    node* root2=createBinaryTree(7);
+    node* root3=createBinaryTree(5);
+    
+    printf("Is Structurally Identical : %d\n",isStructurallyIdentical(root1,root2));
+    printf("Is Structurally Identical : %d\n",isStructurallyIdentical(root1,root3));
+    
 }
