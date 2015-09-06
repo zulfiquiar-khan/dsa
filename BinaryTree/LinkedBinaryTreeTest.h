@@ -124,3 +124,8 @@ void testLevelOrderTraversalInReverse(){
     node* root=createBinaryTree(7);
     levelOrderTraversalInReverse(root);
 }
+
+void testDeleteBinaryTree(){
+    node* root=createBinaryTree(7);
+    deleteBinaryTree(root);
+}

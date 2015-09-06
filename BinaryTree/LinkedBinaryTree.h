@@ -362,3 +362,13 @@ void levelOrderTraversalInReverse(node* root){
     }
     printf("\n");
 }
+
+void deleteBinaryTree(node* root){
+    node* temp=root;
+    if(temp==NULL){
+        return;
+    }
+    deleteBinaryTree(temp->left);
+    deleteBinaryTree(temp->right);
+    free(temp);
+}
