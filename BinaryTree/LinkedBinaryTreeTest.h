@@ -129,3 +129,8 @@ void testDeleteBinaryTree(){
     node* root=createBinaryTree(7);
     deleteBinaryTree(root);
 }
+
+void testHeightOfBinaryTreeRecursive(){
+    node* root=createBinaryTree(7);
+    printf("Height : %d\n",heightOfBinaryTreeRecursive(root));
+}

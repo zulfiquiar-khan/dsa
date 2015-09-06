@@ -372,3 +372,20 @@ void deleteBinaryTree(node* root){
     deleteBinaryTree(temp->right);
     free(temp);
 }
+
+int heightOfBinaryTreeRecursive(node* root){
+    if(root==NULL){
+        return -1;
+    }
+    int left=0;
+    int right=0;
+    left=heightOfBinaryTreeRecursive(root->left);
+    right=heightOfBinaryTreeRecursive(root->right);
+
+    if(left>right){
+        return left+1;
+    }
+    else{
+        return right+1;
+    }
+}

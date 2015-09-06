@@ -19,7 +19,10 @@ int main(int argc, char **argv)
     //testSizeOfBinaryTreeRecursive();
     //testSizeOfBinaryTreeIterative();
     //testLevelOrderTraversalInReverse();
-    testDeleteBinaryTree();
+    //testDeleteBinaryTree();
+    testHeightOfBinaryTreeRecursive();
     
     return 0;
 }
+
+
