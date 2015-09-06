@@ -139,3 +139,9 @@ void testHeightOfBinaryTreeIterative(){
     node* root=createBinaryTree(9);
     printf("Height : %d\n",heightOfBinaryTreeIterative(root));
 }
+
+void testDeepestNodeInBinaryTree(){
+    node* root=createBinaryTree(9);
+    node* deepestNode=deepestNodeInBinaryTree(root);
+    printf("Deepest Node : %d\n",deepestNode->data);
+}

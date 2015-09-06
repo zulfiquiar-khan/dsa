@@ -418,3 +418,22 @@ int heightOfBinaryTreeIterative(node* root){
     deleteLinkedQueue(queue);
     return level;
 }
+
+node* deepestNodeInBinaryTree(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+            if(root->left!=NULL){
+                enqueueLinkedQueue(queue,root->left);
+            }
+            if(root->right!=NULL){
+                enqueueLinkedQueue(queue,root->right);
+            }
+    }
+    deleteLinkedQueue(queue);
+    return root;
+}
