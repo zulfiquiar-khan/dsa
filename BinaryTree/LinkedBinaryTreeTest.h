@@ -156,3 +156,8 @@ void testNoOfFullNodesInBinaryTree(){
     node* root=createBinaryTree(7);
     printf("No Of Full Nodes : %d ",noOfFullNodesInBinaryTree(root));
 }
+
+void testNoOfHalfNodesInBinaryTree(){
+    node* root=createBinaryTree(5);
+    printf("No Of Half Nodes : %d ",noOfHalfNodesInBinaryTree(root));
+}

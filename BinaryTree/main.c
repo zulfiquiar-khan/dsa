@@ -24,7 +24,8 @@ int main(int argc, char **argv)
     //testHeightOfBinaryTreeIterative();
     //testDeepestNodeInBinaryTree();
     //testNoOfLeafNodesInBinaryTree();
-    testNoOfFullNodesInBinaryTree();
+    //testNoOfFullNodesInBinaryTree();
+    testNoOfHalfNodesInBinaryTree();
     
     return 0;
 }
