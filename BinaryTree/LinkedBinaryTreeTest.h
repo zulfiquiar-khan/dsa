@@ -145,3 +145,8 @@ void testDeepestNodeInBinaryTree(){
     node* deepestNode=deepestNodeInBinaryTree(root);
     printf("Deepest Node : %d\n",deepestNode->data);
 }
+
+void testNoOfLeafNodesInBinaryTree(){
+    node* root=createBinaryTree(7);
+    printf("No Of Leaf Nodes : %d ",noOfLeafNodesInBinaryTree(root));
+}
