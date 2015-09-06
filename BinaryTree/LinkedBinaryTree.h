@@ -389,3 +389,32 @@ int heightOfBinaryTreeRecursive(node* root){
         return right+1;
     }
 }
+
+int heightOfBinaryTreeIterative(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int level=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    enqueueLinkedQueue(queue,NULL);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+        if(root==NULL){
+            if(!isEmptyLinkedQueue(queue)){
+                enqueueLinkedQueue(queue,NULL);
+                level++;
+            }
+        }
+        else{
+            if(root->left!=NULL){
+                enqueueLinkedQueue(queue,root->left);
+            }
+            if(root->right!=NULL){
+                enqueueLinkedQueue(queue,root->right);
+            }
+        }
+    }
+    deleteLinkedQueue(queue);
+    return level;
+}
