@@ -462,3 +462,27 @@ int noOfLeafNodesInBinaryTree(node* root){
     deleteLinkedQueue(queue);
     return count;
 }
+
+
+int noOfFullNodesInBinaryTree(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int count=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+        if(root->left!=NULL&&root->right!=NULL){
+            count++;
+        }
+            if(root->left!=NULL){
+                enqueueLinkedQueue(queue,root->left);
+            }
+            if(root->right!=NULL){
+                enqueueLinkedQueue(queue,root->right);
+            }
+    }
+    deleteLinkedQueue(queue);
+    return count;
+}

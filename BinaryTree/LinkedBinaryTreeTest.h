@@ -150,3 +150,9 @@ void testNoOfLeafNodesInBinaryTree(){
     node* root=createBinaryTree(7);
     printf("No Of Leaf Nodes : %d ",noOfLeafNodesInBinaryTree(root));
 }
+
+
+void testNoOfFullNodesInBinaryTree(){
+    node* root=createBinaryTree(7);
+    printf("No Of Full Nodes : %d ",noOfFullNodesInBinaryTree(root));
+}
