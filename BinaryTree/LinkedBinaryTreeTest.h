@@ -166,3 +166,9 @@ void testIsStructurallyIdentical(){
     printf("Is Structurally Identical : %d\n",isStructurallyIdentical(root1,root3));
     
 }
+
+void testDiameterOfBinaryTree(){
+    node* root1=createBinaryTree(7);
+    int ptr=0;
+    printf("return  : %d  ptr : %d \n",diameterOfBinaryTree(root1,&ptr));
+}

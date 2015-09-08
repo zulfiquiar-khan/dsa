@@ -26,7 +26,8 @@ int main(int argc, char **argv)
     //testNoOfLeafNodesInBinaryTree();
     //testNoOfFullNodesInBinaryTree();
     //testNoOfHalfNodesInBinaryTree();
-    testIsStructurallyIdentical();
+    //testIsStructurallyIdentical();
+    testDiameterOfBinaryTree();
     
     return 0;
 }
