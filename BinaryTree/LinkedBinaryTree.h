@@ -526,25 +526,27 @@ int isStructurallyIdentical(node* root1,node* root2){
     return(isStructurallyIdentical(root1->left,root2->left)&&isStructurallyIdentical(root1->right,root2->right));
 }
 
-int diameterOfBinaryTree(node* root,int *ptr){
-    int left=0;
-    int right=0;
-    int max=0;
+int diameterOfBinaryTree(node* root,int* height){
+    int ld=0;
+    int rd=0;
+    int lh=0;
+    int rh=0;
     if(root==NULL){
+        *height=0;
         return 0;
     }
-    left=diameterOfBinaryTree(root->left,ptr);
-    right=diameterOfBinaryTree(root->right,ptr);
-    if(left+right>*ptr){
-        *ptr=left+right;
+    
+    ld=diameterOfBinaryTree(root->left,&lh);
+    rd=diameterOfBinaryTree(root->right,&rh);
+    
+    *height=max(lh,rh)+1;
+    
+    return max(max(ld,rd),lh+rh+1);
+}
+
+int max(int a,int b){
+    if(a>b){
+        return a;
     }
- 
-    if(left>right){
-        max=left;
-    }
-    else{
-        max=right;
-    }
-       printf("Node : %d  left : %d right : %d max : %d\n",root->data,left,right,max);
-    return max+1;
+    return b;
 }
