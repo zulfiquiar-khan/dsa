@@ -269,3 +269,11 @@ void testCreateBinaryTreeFromInorderAndPreOrderArray(){
     levelOrderTraversalIteartive(root);
     printf("\n");
 }
+
+void testPrintAllAcestorOfANode(){
+    node* root=createBinaryTree(7);
+    printAllAcestorOfANode(root,4);
+    printf("\n");
+    printAllAcestorOfANode(root,7);
+    printf("\n");
+}

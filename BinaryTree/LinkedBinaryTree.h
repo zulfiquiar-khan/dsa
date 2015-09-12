@@ -741,3 +741,19 @@ int getInOrderIndex(int in[],int s,int e,int data){
     return -1;
 }
 
+int printAllAcestorOfANode(node* root,int data){
+    if(root==NULL){
+        return 0;
+    }
+    if(root->data==data){
+        return 1;
+    }
+    int retLeft=printAllAcestorOfANode(root->left,data);
+    int retRight=printAllAcestorOfANode(root->right,data);
+    
+    if(retLeft==1||retRight==1){
+        printf("%d ",root->data);
+        return 1;
+    }
+    return 0;
+}

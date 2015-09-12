@@ -36,7 +36,8 @@ int main(int argc, char **argv)
     //testMirrorABinaryTreeRecursive();
     //testAreMirrors();
     //testLowestCommonAncestor();
-    testCreateBinaryTreeFromInorderAndPreOrderArray();
+    //testCreateBinaryTreeFromInorderAndPreOrderArray();
+    testPrintAllAcestorOfANode();
     
     return 0;
 }
