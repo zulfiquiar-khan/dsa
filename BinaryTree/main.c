@@ -30,8 +30,9 @@ int main(int argc, char **argv)
     //testDiameterOfBinaryTree();
     //testMaxSumLevelOfBinaryTree();
     //testPrintAllRootToLeafPath();
-    testHasPathSum();
-    
+    //testHasPathSum();
+    //testSumOfAllElements();
+    testSumOfAllElementsIterative();
     return 0;
 }
 

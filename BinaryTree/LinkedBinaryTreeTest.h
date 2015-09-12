@@ -196,3 +196,16 @@ void testHasPathSum(){
     printf("Has Path Sum : %d\n",hasPathSum(root1,33));
     printf("Has Path Sum : %d\n",hasPathSum(root1,11));
 }
+
+void  testSumOfAllElements(){
+    node* root1=createBinaryTree(7);
+    
+    printf("Sum of all elements : %d\n",sumOfAllElements(root1));
+
+}
+
+void  testSumOfAllElementsIterative(){
+    node* root1=createBinaryTree(7);
+    printf("Sum of all elements : %d\n",sumOfAllElementsIterative(root1));
+
+}

@@ -628,3 +628,31 @@ int hasPathSum(node* root,int sum){
         hasPathSum(root->right,sum);
     }
 }
+
+int sumOfAllElements(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    return (root->data+sumOfAllElements(root->left)+sumOfAllElements(root->right));
+}
+
+int sumOfAllElementsIterative(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int sum=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    while(!isEmptyLinkedQueue(queue)){
+        root=(node*) dequeueLinkedQueue(queue);
+        sum=sum+root->data;
+        if(root->left!=NULL){
+            enqueueLinkedQueue(queue,root->left);
+        }
+        if(root->right!=NULL){
+            enqueueLinkedQueue(queue,root->right);
+        }
+    }
+    deleteLinkedQueue(queue);
+    return sum;
+}
