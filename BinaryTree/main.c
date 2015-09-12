@@ -34,7 +34,8 @@ int main(int argc, char **argv)
     //testSumOfAllElements();
     //testSumOfAllElementsIterative();
     //testMirrorABinaryTreeRecursive();
-    testAreMirrors();
+    //testAreMirrors();
+    testLowestCommonAncestor();
     
     return 0;
 }

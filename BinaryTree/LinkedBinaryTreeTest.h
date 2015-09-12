@@ -226,3 +226,34 @@ void testAreMirrors(){
     root2=mirrorABinaryTreeRecursive(root2);
     printf("Are mirrors : %d\n",areMirrors(root1,root2));
 }
+
+void testLowestCommonAncestor(){
+    node* root=createBinaryTree(7);
+    int a=0;
+    int b=0;
+    node* lca=lowestCommonAncestor(root,4,5,&a,&b);
+    if(a==1&&b==1){
+        printf("LCA found : %d\n",lca->data);
+    }
+    else{
+        printf("LCA not found\n");
+    }
+    
+    a=0;b=0;
+    lca=lowestCommonAncestor(root,4,2,&a,&b);
+    if(a==1&&b==1){
+        printf("LCA found : %d\n",lca->data);
+    }
+    else{
+        printf("LCA not found\n");
+    }
+    
+    a=0;b=0;
+    lca=lowestCommonAncestor(root,4,10,&a,&b);
+    if(a==1&&b==1){
+        printf("LCA found : %d\n",lca->data);
+    }
+    else{
+        printf("LCA not found\n");
+    }
+}

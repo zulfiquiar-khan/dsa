@@ -681,3 +681,22 @@ int areMirrors(node* root1,node* root2){
     }
     return (areMirrors(root1->left,root2->right)&&areMirrors(root1->right,root2->left));
 }
+
+node* lowestCommonAncestor(node* root,int a,int b,int *a1,int* b1){
+    node* left=NULL;
+    node* right=NULL;
+    if(root==NULL){
+        return root;
+    }
+    left=lowestCommonAncestor(root->left,a,b,a1,b1);
+    right=lowestCommonAncestor(root->right,a,b,a1,b1);
+    if(root->data==a||root->data==b){
+        if(root->data==a){*a1=1;}
+        if(root->data==b){*b1=1;}
+        return root;
+    }
+    if(left!=NULL&&right!=NULL){
+        return root;
+    }
+    return ((left!=NULL?left:right));
+}
