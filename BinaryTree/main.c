@@ -35,7 +35,8 @@ int main(int argc, char **argv)
     //testSumOfAllElementsIterative();
     //testMirrorABinaryTreeRecursive();
     //testAreMirrors();
-    testLowestCommonAncestor();
+    //testLowestCommonAncestor();
+    testCreateBinaryTreeFromInorderAndPreOrderArray();
     
     return 0;
 }

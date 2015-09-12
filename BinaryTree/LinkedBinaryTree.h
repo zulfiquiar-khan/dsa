@@ -700,3 +700,44 @@ node* lowestCommonAncestor(node* root,int a,int b,int *a1,int* b1){
     }
     return ((left!=NULL?left:right));
 }
+
+
+node* createBinaryTreeFromInorderAndPreOrderArray(int pre[],int in[],int s,int e,int* pre_ind){
+    node* left=NULL;
+    node* right=NULL;
+    node* temp=NULL;
+    
+    if(s>e){return NULL;}
+    
+    temp=(node*)malloc(sizeof(node*));
+    temp->data=pre[*pre_ind];
+    temp->left=NULL;
+    temp->right=NULL;
+
+    
+    int in_ind=getInOrderIndex(in,s,e,pre[*pre_ind]);
+    *pre_ind=*pre_ind+1;
+    
+    if(s==e){
+        return temp;
+    }
+    
+    left=createBinaryTreeFromInorderAndPreOrderArray(pre,in,s,in_ind-1,pre_ind);
+    right=createBinaryTreeFromInorderAndPreOrderArray(pre,in,in_ind+1,e,pre_ind);
+    
+    temp->left=left;
+    temp->right=right;
+    
+    return temp;
+}
+
+int getInOrderIndex(int in[],int s,int e,int data){
+    int i=0;
+    for(i=s;i<e;i++){
+        if(in[i]==data){
+            return i;
+        }
+    }
+    return -1;
+}
+
