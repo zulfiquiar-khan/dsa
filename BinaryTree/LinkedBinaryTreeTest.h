@@ -172,3 +172,15 @@ void testDiameterOfBinaryTree(){
     int ptr=0;
     printf("return  : %d  ptr : %d \n",diameterOfBinaryTree(root1,&ptr));
 }
+
+void testMaxSumLevelOfBinaryTree(){
+    node* root1=createBinaryTree(7);
+    printf("Max Sum Level  : %d \n",maxSumLevelOfBinaryTree(root1));
+
+   root1=createBinaryTree(10);
+    printf("Max Sum Level  : %d \n",maxSumLevelOfBinaryTree(root1));
+    
+       root1=createBinaryTree(1);
+    printf("Max Sum Level  : %d \n",maxSumLevelOfBinaryTree(root1));
+
+}

@@ -550,3 +550,42 @@ int max(int a,int b){
     }
     return b;
 }
+
+int maxSumLevelOfBinaryTree(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int currentSum=0;
+    int maxSum=0;
+    int maxLevel=0;
+    int level=0;
+    struct LinkedQueue* queue=createLinkedQueue();
+    enqueueLinkedQueue(queue,root);
+    enqueueLinkedQueue(queue,NULL);
+    while(!isEmptyLinkedQueue(queue)){
+        root=dequeueLinkedQueue(queue);
+        if(root==NULL){
+            if(currentSum>maxSum){
+                maxSum=currentSum;
+                maxLevel=level;
+            }
+            currentSum=0;
+            if(!isEmptyLinkedQueue(queue)){
+                enqueueLinkedQueue(queue,NULL);
+                level++;
+            }
+        }
+        else{
+            currentSum=currentSum+root->data;
+            
+            if(root->left!=NULL){
+                enqueueLinkedQueue(queue,root->left);
+            }
+            if(root->right!=NULL){
+                enqueueLinkedQueue(queue,root->right);
+            }
+        }
+    }
+    deleteLinkedQueue(queue);
+    return level;
+}
