@@ -33,7 +33,8 @@ int main(int argc, char **argv)
     //testHasPathSum();
     //testSumOfAllElements();
     //testSumOfAllElementsIterative();
-    testMirrorABinaryTreeRecursive();
+    //testMirrorABinaryTreeRecursive();
+    testAreMirrors();
     
     return 0;
 }

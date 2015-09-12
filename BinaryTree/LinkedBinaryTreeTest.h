@@ -218,3 +218,11 @@ void testMirrorABinaryTreeRecursive(){
         levelOrderTraversalIteartive(root);
         printf("\n");
 }
+
+void testAreMirrors(){
+    node * root1=createBinaryTree(7);
+    node*  root2=createBinaryTree(7);
+    printf("Are mirrors : %d\n",areMirrors(root1,root2));
+    root2=mirrorABinaryTreeRecursive(root2);
+    printf("Are mirrors : %d\n",areMirrors(root1,root2));
+}
