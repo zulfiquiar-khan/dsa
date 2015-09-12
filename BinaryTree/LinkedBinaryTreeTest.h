@@ -190,3 +190,9 @@ void testPrintAllRootToLeafPath(){
     int path [30];
     printAllRootToLeafPath(root1,0,path);
 }
+
+void testHasPathSum(){
+    node* root1=createBinaryTree(7);
+    printf("Has Path Sum : %d\n",hasPathSum(root1,33));
+    printf("Has Path Sum : %d\n",hasPathSum(root1,11));
+}

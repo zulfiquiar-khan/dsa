@@ -612,3 +612,19 @@ void printArray(int path[],int pathlen){
     }
     printf("\n");
 }
+
+
+int hasPathSum(node* root,int sum){
+    if(root==NULL){
+        return 0;
+    }
+    int retVal=0;
+    sum=sum-root->data;
+    if(sum==0){
+        return 1;
+    }
+    retVal=hasPathSum(root->left,sum);
+    if(retVal!=1){
+        hasPathSum(root->right,sum);
+    }
+}
