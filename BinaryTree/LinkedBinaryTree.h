@@ -589,3 +589,26 @@ int maxSumLevelOfBinaryTree(node* root){
     deleteLinkedQueue(queue);
     return level;
 }
+
+void printAllRootToLeafPath(node* root,int pathlen,int path[]){
+    if(root==NULL){
+        return;
+    }
+    path[pathlen]=root->data;
+    pathlen++;
+    if(root->left==NULL&&root->right==NULL){
+        printArray(path,pathlen);
+    }
+    else{
+        printAllRootToLeafPath(root->left,pathlen,path);
+        printAllRootToLeafPath(root->right,pathlen,path);
+    }
+}
+
+void printArray(int path[],int pathlen){
+    int i=0;
+    for(i=0;i<pathlen;i++){
+        printf("%d ",path[i]);
+    }
+    printf("\n");
+}

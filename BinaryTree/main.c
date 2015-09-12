@@ -28,7 +28,8 @@ int main(int argc, char **argv)
     //testNoOfHalfNodesInBinaryTree();
     //testIsStructurallyIdentical();
     //testDiameterOfBinaryTree();
-    testMaxSumLevelOfBinaryTree();
+    //testMaxSumLevelOfBinaryTree();
+    testPrintAllRootToLeafPath();
     
     return 0;
 }

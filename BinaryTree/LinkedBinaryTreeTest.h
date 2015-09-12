@@ -184,3 +184,9 @@ void testMaxSumLevelOfBinaryTree(){
     printf("Max Sum Level  : %d \n",maxSumLevelOfBinaryTree(root1));
 
 }
+
+void testPrintAllRootToLeafPath(){
+    node* root1=createBinaryTree(20);
+    int path [30];
+    printAllRootToLeafPath(root1,0,path);
+}
