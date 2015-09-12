@@ -656,3 +656,15 @@ int sumOfAllElementsIterative(node* root){
     deleteLinkedQueue(queue);
     return sum;
 }
+
+node* mirrorABinaryTreeRecursive(node* root){
+    node* temp=NULL;
+    if(root!=NULL){
+        mirrorABinaryTreeRecursive(root->left);
+        mirrorABinaryTreeRecursive(root->right);
+        temp=root->left;
+        root->left=root->right;
+        root->right=temp;
+    }
+    return root;
+}

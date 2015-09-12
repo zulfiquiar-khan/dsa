@@ -32,7 +32,9 @@ int main(int argc, char **argv)
     //testPrintAllRootToLeafPath();
     //testHasPathSum();
     //testSumOfAllElements();
-    testSumOfAllElementsIterative();
+    //testSumOfAllElementsIterative();
+    testMirrorABinaryTreeRecursive();
+    
     return 0;
 }
 

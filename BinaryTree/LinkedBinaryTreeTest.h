@@ -209,3 +209,12 @@ void  testSumOfAllElementsIterative(){
     printf("Sum of all elements : %d\n",sumOfAllElementsIterative(root1));
 
 }
+
+void testMirrorABinaryTreeRecursive(){
+        node* root=createBinaryTree(7);
+        levelOrderTraversalIteartive(root);
+        printf("\n");
+        root=mirrorABinaryTreeRecursive(root);
+        levelOrderTraversalIteartive(root);
+        printf("\n");
+}
