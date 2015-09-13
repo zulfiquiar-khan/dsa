@@ -1,4 +1,5 @@
-#include"LinkedBinaryTreeTest.h"
+//#include"LinkedBinaryTreeTest.h"
+#include"BinarySiblingTreeTest.h"
 
 int main(int argc, char **argv)
 {
@@ -39,7 +40,8 @@ int main(int argc, char **argv)
     //testCreateBinaryTreeFromInorderAndPreOrderArray();
     //testPrintAllAcestorOfANode();
     //testZigZagTraversal();
-    testCreateBinaryTreeWithPreOrder();
+    //testCreateBinaryTreeWithPreOrder();
+    testFillSibling();
     
     return 0;
 }
