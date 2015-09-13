@@ -37,7 +37,8 @@ int main(int argc, char **argv)
     //testAreMirrors();
     //testLowestCommonAncestor();
     //testCreateBinaryTreeFromInorderAndPreOrderArray();
-    testPrintAllAcestorOfANode();
+    //testPrintAllAcestorOfANode();
+    testZigZagTraversal();
     
     return 0;
 }

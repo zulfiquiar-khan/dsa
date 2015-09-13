@@ -277,3 +277,10 @@ void testPrintAllAcestorOfANode(){
     printAllAcestorOfANode(root,7);
     printf("\n");
 }
+
+void testZigZagTraversal(){
+    node* root=createBinaryTree(7);
+    printf("\n");
+    zigZagTraversal(root);
+    printf("\n");
+}

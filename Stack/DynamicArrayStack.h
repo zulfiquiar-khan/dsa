@@ -98,3 +98,15 @@ else{
 	printf("\nStack is Empty\n");
 }
 }
+
+
+void swap(struct Stack** stack1,struct Stack** stack2){
+    *stack2=createStack();
+    int i=0;
+    for(i=0;i<=(*stack1)->top;i++){
+        push(*stack2,(*stack1)->array[i]);
+    }
+    while(!isEmptyStack(*stack1)){
+        pop(*stack1);
+    }
+}

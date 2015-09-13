@@ -757,3 +757,30 @@ int printAllAcestorOfANode(node* root,int data){
     }
     return 0;
 }
+
+
+void zigZagTraversal(node* root){
+    struct Stack* currentStack=createStack();
+    struct Stack* nextStack=createStack();
+    int leftToRight=1;
+    push(currentStack,root);
+    while(!isEmptyStack(currentStack)){
+        root=pop(currentStack);
+        printf("%d ",root->data);
+        if(root!=NULL){
+            if(leftToRight==1){
+                if(root->left!=NULL)push(nextStack,root->left);
+                if(root->right!=NULL)push(nextStack,root->right);
+            }
+            else{
+                if(root->right!=NULL)push(nextStack,root->right);
+                if(root->left!=NULL)push(nextStack,root->left);
+            }
+        }
+        if(isEmptyStack(currentStack)){
+            leftToRight=1-leftToRight;
+            swap(&nextStack,&currentStack);
+        }
+    }
+
+}
