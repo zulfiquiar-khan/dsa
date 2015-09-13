@@ -44,3 +44,17 @@ void fillSibling(struct BinarySiblingNode* root){
             
         }
 }
+
+void fillSiblingRevursive(struct BinarySiblingNode* root){
+    if(root==NULL){
+        return;
+    }
+    if(root->left!=NULL){
+        root->left->sibling=root->right;
+    }
+    if(root->right!=NULL){
+        root->right->sibling=(root->sibling!=NULL)?root->sibling->left:NULL;
+    }
+    fillSiblingRevursive(root->left);
+    fillSiblingRevursive(root->right);
+}
