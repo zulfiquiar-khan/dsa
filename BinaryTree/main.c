@@ -38,7 +38,8 @@ int main(int argc, char **argv)
     //testLowestCommonAncestor();
     //testCreateBinaryTreeFromInorderAndPreOrderArray();
     //testPrintAllAcestorOfANode();
-    testZigZagTraversal();
+    //testZigZagTraversal();
+    testCreateBinaryTreeWithPreOrder();
     
     return 0;
 }

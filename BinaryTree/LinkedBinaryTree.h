@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include"../Stack/DynamicArrayStack.h"
 #include"../Queue/LinkedListQueue.h"
+#include"../LinkedList/HashMap.h"
 
 struct BinaryTreeNode{
     int data;
@@ -759,6 +760,8 @@ int printAllAcestorOfANode(node* root,int data){
 }
 
 
+
+
 void zigZagTraversal(node* root){
     struct Stack* currentStack=createStack();
     struct Stack* nextStack=createStack();
@@ -783,4 +786,23 @@ void zigZagTraversal(node* root){
         }
     }
 
+}
+
+node* createBinaryTreeWithPreOrder(int A[],int *i){
+    node* newNode=(node*)malloc(sizeof(node*));
+    newNode->left=NULL;
+    newNode->right=NULL;
+    newNode->data=A[*i];
+    if(A==NULL){
+        free(newNode);
+        return NULL;
+    }
+    if(A[*i]=='L'){
+        return newNode;
+    }
+    *i=*i+1;
+    newNode->left=createBinaryTreeWithPreOrder(A,i);
+    *i=*i+1;
+    newNode->right=createBinaryTreeWithPreOrder(A,i);
+    return newNode;
 }

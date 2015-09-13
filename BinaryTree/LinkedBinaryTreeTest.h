@@ -284,3 +284,11 @@ void testZigZagTraversal(){
     zigZagTraversal(root);
     printf("\n");
 }
+
+void testCreateBinaryTreeWithPreOrder(){
+    int A[]={'I','L','I','L','L'};
+    int i=0;
+    node* root=createBinaryTreeWithPreOrder(A,&i);
+    preOrderTraversalRecursive(root);
+    printf("\n");
+}
