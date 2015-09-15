@@ -43,7 +43,8 @@ int main(int argc, char **argv)
     //testCreateBinaryTreeWithPreOrder();
     //testFillSibling();
     //testFillSiblingRevursive();
-    testIsIsomorphicBinaryTree();
+    //testIsIsomorphicBinaryTree();
+    testIsQuasiIsomorphicBinaryTree();
     
     return 0;
 }

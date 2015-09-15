@@ -348,3 +348,11 @@ void testIsIsomorphicBinaryTree(){
     printf("Is isomorphic : %d\n",isIsomorphicBinaryTree(root1,root2));
     printf("Is isomorphic : %d\n",isIsomorphicBinaryTree(root1,root3));
 }
+
+void testIsQuasiIsomorphicBinaryTree(){
+    node* root1=createBinaryTree(7);
+    node* root2=createBinaryTree(7);
+    node* root3=createBinaryTree(5);
+    printf("Is Quasi isomorphic : %d\n",isQuasiIsomorphicBinaryTree(root1,root2));
+    printf("Is Quasi isomorphic : %d\n",isQuasiIsomorphicBinaryTree(root1,root3));
+}
