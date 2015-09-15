@@ -53,3 +53,18 @@ int countSiblings(genericnode* node){
     }
     return count;
 }
+
+
+
+int countChilds(genericnode* node){
+    int count=0;
+    if(node==NULL){
+        return count;
+    }
+    node=node->firstChild;
+    while(node!=NULL){
+        count++;
+        node=node->sibling;
+    }
+    return count;
+}

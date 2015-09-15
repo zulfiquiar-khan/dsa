@@ -4,7 +4,8 @@ int main(int argc, char **argv)
 {
     //testSumOfAllElementsRecursive();
     //testSumOfAllElementsIterative();
-	testCountSiblings();
+	//testCountSiblings();
+    testCountChilds();
     
     return 0;
 }
