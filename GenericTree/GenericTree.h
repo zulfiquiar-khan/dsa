@@ -25,6 +25,7 @@ int  sumOfAllElementsIterative(genericnode* root){
     struct LinkedQueue* queue=createLinkedQueue();
     enqueueLinkedQueue(queue,root);
     displayLinkedQueue(queue);
+    int sum=0;
     while(!isEmptyLinkedQueue(queue)){
         root=(genericnode*) dequeueLinkedQueue(queue);
         sum=sum+root->data;
@@ -39,3 +40,16 @@ int  sumOfAllElementsIterative(genericnode* root){
     return sum;
 }
 
+
+int countSiblings(genericnode* node){
+    int count=0;
+    if(node==NULL){
+        return count;
+    }
+    node=node->sibling;
+    while(node!=NULL){
+        count++;
+        node=node->sibling;
+    }
+    return count;
+}

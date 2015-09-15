@@ -3,6 +3,8 @@
 int main(int argc, char **argv)
 {
     //testSumOfAllElementsRecursive();
-    testSumOfAllElementsIterative();
-	return 0;
+    //testSumOfAllElementsIterative();
+	testCountSiblings();
+    
+    return 0;
 }
