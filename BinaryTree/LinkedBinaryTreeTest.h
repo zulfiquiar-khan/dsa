@@ -294,7 +294,7 @@ void testCreateBinaryTreeWithPreOrder(){
 }
 
 void testFillSibling(){
-    struct BinarySiblingNode* root=(struct BinarySiblingNode*)malloc(sizeof(struct BinarySiblingNode*));
+    /*struct BinarySiblingNode* root=(struct BinarySiblingNode*)malloc(sizeof(struct BinarySiblingNode*));
     root->left=NULL;
     root->right=NULL;
     root->sibling=NULL;
@@ -338,5 +338,13 @@ void testFillSibling(){
     newNode2->left=newNode5;
     newNode2->right=newNode6;
 
-    fillSibling(root);
+    fillSibling(root);*/
+}
+
+void testIsIsomorphicBinaryTree(){
+    node* root1=createBinaryTree(7);
+    node* root2=createBinaryTree(7);
+    node* root3=createBinaryTree(5);
+    printf("Is isomorphic : %d\n",isIsomorphicBinaryTree(root1,root2));
+    printf("Is isomorphic : %d\n",isIsomorphicBinaryTree(root1,root3));
 }

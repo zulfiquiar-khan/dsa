@@ -806,3 +806,14 @@ node* createBinaryTreeWithPreOrder(int A[],int *i){
     newNode->right=createBinaryTreeWithPreOrder(A,i);
     return newNode;
 }
+
+
+int isIsomorphicBinaryTree(node* root1,node* root2){
+    if(root1==NULL&&root2==NULL){
+        return 1;
+    }
+    if((root1==NULL&&root2!=NULL)||(root1!=NULL&&root2==NULL)){
+        return 0;
+    }
+    return  (isIsomorphicBinaryTree(root1->left,root2->left)&&isIsomorphicBinaryTree(root1->right,root2->right));
+}
