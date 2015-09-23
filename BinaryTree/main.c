@@ -1,5 +1,6 @@
-#include"LinkedBinaryTreeTest.h"
+//#include"LinkedBinaryTreeTest.h"
 //#include"BinarySiblingTreeTest.h"
+#include"ThreadedBinaryTreeTest.h"
 
 int main(int argc, char **argv)
 {
@@ -44,7 +45,8 @@ int main(int argc, char **argv)
     //testFillSibling();
     //testFillSiblingRevursive();
     //testIsIsomorphicBinaryTree();
-    testIsQuasiIsomorphicBinaryTree();
+    //testIsQuasiIsomorphicBinaryTree();
+    testCreateInorderThreadedBinaryTree();
     
     return 0;
 }
