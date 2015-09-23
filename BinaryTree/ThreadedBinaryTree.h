@@ -87,3 +87,15 @@ void  threadInorder(int array[],int length,threaded_node* newRoot){
 }
 
 
+threaded_node* findInorderSuccesor(threaded_node* root){
+    if(root==NULL){
+        return NULL;
+    }
+    threaded_node* position=NULL;
+    if(root->rTag==0){return root->right;}
+    else{
+        position=root->right;
+        while(position->lTag==1){position=position->left;}
+        return position;
+    }
+}
