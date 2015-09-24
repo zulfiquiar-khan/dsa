@@ -109,3 +109,15 @@ void inorderTraversal(threaded_node* root){
     }
     printf("\n");
 }
+
+threaded_node* findPreOrderSuccesor(threaded_node* root){
+    threaded_node* position=NULL;
+    if(root->lTag==1){
+        return root->left;
+    }
+    position=root;
+    while(position->rTag==0){
+        position=position->right;
+    }
+    return position->right;
+}
