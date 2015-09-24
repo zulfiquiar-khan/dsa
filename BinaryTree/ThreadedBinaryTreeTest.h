@@ -51,3 +51,9 @@ void testFindPreorderSuccesor(){
     printf("Node : %u->%d  Successor : %u->%d \n",root1->left->right->right,root1->left->right->right->data,succesor,succesor->data);
 
 }
+
+void testPreOrderTraversal(){
+    node* root=createBinaryTree(7);
+    threaded_node* root1=createInorderThreadedBinaryTree(root);
+    preOrderTraversal(root1);
+}

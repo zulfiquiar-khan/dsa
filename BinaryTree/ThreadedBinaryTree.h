@@ -121,3 +121,13 @@ threaded_node* findPreOrderSuccesor(threaded_node* root){
     }
     return position->right;
 }
+
+void preOrderTraversal(threaded_node* root){
+    threaded_node* P=findPreOrderSuccesor(root);
+    while(1){
+        if(P==root){break;}
+        printf("%d ",P->data);
+        P=findPreOrderSuccesor(P);
+    }
+    printf("\n");
+}

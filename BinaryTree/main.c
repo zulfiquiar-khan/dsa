@@ -49,7 +49,8 @@ int main(int argc, char **argv)
     //testCreateInorderThreadedBinaryTree();
     //testFindInorderSuccesor();
     //testInorderTraversal();
-    testFindPreorderSuccesor();
+    //testFindPreorderSuccesor();
+    testPreOrderTraversal();
     
     return 0;
 }
