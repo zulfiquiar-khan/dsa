@@ -47,7 +47,8 @@ int main(int argc, char **argv)
     //testIsIsomorphicBinaryTree();
     //testIsQuasiIsomorphicBinaryTree();
     //testCreateInorderThreadedBinaryTree();
-    testFindInorderSuccesor();
+    //testFindInorderSuccesor();
+    testInorderTraversal();
     
     return 0;
 }

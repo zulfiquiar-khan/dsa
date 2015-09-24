@@ -99,3 +99,13 @@ threaded_node* findInorderSuccesor(threaded_node* root){
         return position;
     }
 }
+
+void inorderTraversal(threaded_node* root){
+    threaded_node* P=findInorderSuccesor(root);
+    while(1){
+        printf("%d ",P->data);
+        P=findInorderSuccesor(P);
+        if(P==root){break;}
+    }
+    printf("\n");
+}
