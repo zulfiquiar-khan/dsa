@@ -141,3 +141,44 @@ bstNode* deleteRecursive(bstNode* root,int data){
     }
     return root;
 }
+
+void deleteIterative(bstNode* root,int data){
+    bstNode* temp=NULL;
+    bstNode* prev=NULL;
+    int flag=0; //0 for left move 1 for right move
+    while(root!=NULL){
+        printf("root : %d prev : %d  flag : %d data : %d \n",root->data,(prev!=NULL)?prev->data:0,flag,data);
+        if(root->data>data){
+            prev=root;
+            root=root->left;
+            flag=0;
+            printf("After left move - root : %d prev : %d  flag : %d data: %d \n",root->data,(prev!=NULL)?prev->data:0,flag,data);
+        }
+        else if(root->data<data){
+            prev=root;
+            root=root->right;
+            flag=1;
+            printf("After right move - root : %d prev : %d  flag : %d data : %d \n",root->data,(prev!=NULL)?prev->data:0,flag,data);
+        }
+        else{
+            printf("Data match - root : %d prev : %d  flag : %d data : %d \n",root->data,(prev!=NULL)?prev->data:0,flag,data);
+            if(root->left==NULL&&root->right==NULL){setPreviousNode(prev,NULL,flag);break;}
+            else if(root->left==NULL){setPreviousNode(prev,root->right,flag);break;}
+            else if(root->right==NULL){setPreviousNode(prev,root->left,flag);break;}
+            else{
+                temp=findMaximumElementIterative(root->left);
+                root->data=temp->data;
+                prev=root;
+                data=root->data;
+                root=root->left;
+                flag=0;
+                 printf("After special case - root : %d prev : %d  flag : %d data : %d \n",root->data,(prev!=NULL)?prev->data:0,flag,data);
+            }
+        }
+    }
+}
+
+void setPreviousNode(bstNode* prev,bstNode* root,int flag){
+    if(flag==0)prev->left=root;
+    else prev->right=root;
+}

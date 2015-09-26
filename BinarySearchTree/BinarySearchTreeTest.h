@@ -151,3 +151,14 @@ void testDeleteRecursive(){
     traverseInorder(root);
     printf("\n");
 }
+
+void testDeleteIterative(){
+    bstNode* root=createBstForTest();
+    printf("Before Delete :   ");
+    traverseInorder(root);
+    printf("\n");
+    deleteIterative(root,7);
+    printf("After   Delete :   ");
+    traverseInorder(root);
+    printf("\n");
+}

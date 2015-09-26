@@ -11,7 +11,8 @@ int main(int argc, char **argv)
     //testFindInorderSuccessor();
     //testInsertAnElementRecursive();
     //testInsertAnElementIterative();
-    testDeleteRecursive();
+    //testDeleteRecursive();
+    testDeleteIterative();
     
     return 0;
 }
