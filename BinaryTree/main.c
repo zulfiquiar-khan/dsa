@@ -1,6 +1,7 @@
 //#include"LinkedBinaryTreeTest.h"
 //#include"BinarySiblingTreeTest.h"
-#include"ThreadedBinaryTreeTest.h"
+//#include"ThreadedBinaryTreeTest.h"
+#include"BinaryExpressionTreeTest.h"
 
 int main(int argc, char **argv)
 {
@@ -50,7 +51,8 @@ int main(int argc, char **argv)
     //testFindInorderSuccesor();
     //testInorderTraversal();
     //testFindPreorderSuccesor();
-    testPreOrderTraversal();
+    //testPreOrderTraversal();
+    testCreateExpressionTree();
     
     return 0;
 }
