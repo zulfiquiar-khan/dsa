@@ -126,3 +126,10 @@ void testFindInorderSuccessor(){
     if(successor==NULL)printf("Not found\n");
     else printf("Predecessor : %d \n",successor->data);
 }
+
+void testInsertAnElementRecursive(){
+     bstNode* root=createBstForTest();
+     insertAnElementRecursive(root,16);
+     traverseInorder(root);
+     printf("\n");
+}

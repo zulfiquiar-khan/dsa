@@ -59,3 +59,35 @@ bstNode* findInorderSuccessor(bstNode* root,bstNode* element){
     bstNode* successor=findMinimumElementIterative(found->right);
     return successor;
 }
+
+bstNode* insertAnElementRecursive(bstNode* root,int data){
+    if(root==NULL){
+        root=(bstNode*)malloc(sizeof(bstNode));
+        if(root==NULL){
+            printf("Memory Errro\n");
+            return NULL;
+        }
+        else{
+            root->data=data;
+            root->left=root->right=NULL;
+        }       
+    }
+    else{
+        if(root->data>data){
+            root->left=insertAnElementRecursive(root->left,data);
+        }
+        else if(root->data<data){
+            root->right=insertAnElementRecursive(root->right,data);
+        }
+    }
+    return root;
+}
+
+void traverseInorder(bstNode* root){
+    if(root==NULL){
+        return;
+    }
+    traverseInorder(root->left);
+    printf("%d ",root->data);
+    traverseInorder(root->right);
+}

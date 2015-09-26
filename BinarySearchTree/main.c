@@ -8,8 +8,8 @@ int main(int argc, char **argv)
     //testFindMinimumElementIterative();
     //testFindMaximumElementRecursive();
     //testFindInorderPredecessor();
-    testFindInorderSuccessor();
-    
+    //testFindInorderSuccessor();
+    testInsertAnElementRecursive();
     return 0;
 }
 
