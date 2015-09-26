@@ -62,3 +62,26 @@ void testFindAnElementRecursive(){
     else printf("Not Found\n");
 }
 
+void testFindAnElementIterative(){
+    bstNode* root=createBstForTest();
+    bstNode* element=findAnElementIterative(root,5);
+    if(element!=NULL)printf("%d \n",element->data);
+    else printf("Not Found\n");
+    
+    element=findAnElementIterative(root,2);
+    if(element!=NULL)printf("%d \n",element->data);
+    else printf("Not Found\n");
+    
+    element=findAnElementIterative(root,8);
+    if(element!=NULL)printf("%d \n",element->data);
+    else printf("Not Found\n");
+    
+    element=findAnElementIterative(root,11);
+    if(element!=NULL)printf("%d \n",element->data);
+    else printf("Not Found\n");
+    
+    element=findAnElementIterative(root,25);
+    if(element!=NULL)printf("%d \n",element->data);
+    else printf("Not Found\n");
+}
+

@@ -14,4 +14,12 @@ bstNode* findAnElementRecursive(bstNode* root,int data){
     else if(root->data<data) findAnElementRecursive(root->right,data);
 }
 
+bstNode* findAnElementIterative(bstNode* root,int data){
+    while(root!=NULL){
+        if(root->data==data)return root;
+        else if(root->data>data) root=root->left;
+        else root=root->right;
+    }
+    return root;
+}
 

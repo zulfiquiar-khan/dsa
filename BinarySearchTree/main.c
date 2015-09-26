@@ -2,6 +2,8 @@
 
 int main(int argc, char **argv)
 {
-        testFindAnElementRecursive();
-	return 0;
+    //testFindAnElementRecursive();
+	testFindAnElementIterative();
+    
+    return 0;
 }
