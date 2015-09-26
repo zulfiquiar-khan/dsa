@@ -83,6 +83,36 @@ bstNode* insertAnElementRecursive(bstNode* root,int data){
     return root;
 }
 
+void insertAnElementIterative(bstNode* root,int data){
+    if(root==NULL){
+        return;
+    }
+    bstNode* element=(bstNode*)malloc(sizeof(bstNode));
+    element->data=data;
+    element->left=element->right=NULL;
+    while(1){
+        if(root->data<data){
+            if(root->right==NULL){
+                root->right=element;
+                break;
+            }
+            else{
+                root=root->right;
+            }
+        }
+        else if(root->data>data){
+            if(root->left==NULL){
+                root->left=element;
+                break;
+            }
+            else{
+                root=root->left;
+            }
+        }
+    }
+    return;
+}
+
 void traverseInorder(bstNode* root){
     if(root==NULL){
         return;

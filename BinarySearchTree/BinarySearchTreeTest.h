@@ -133,3 +133,10 @@ void testInsertAnElementRecursive(){
      traverseInorder(root);
      printf("\n");
 }
+
+void testInsertAnElementIterative(){
+     bstNode* root=createBstForTest();
+     insertAnElementIterative(root,16);
+     traverseInorder(root);
+     printf("\n");
+}

@@ -9,7 +9,8 @@ int main(int argc, char **argv)
     //testFindMaximumElementRecursive();
     //testFindInorderPredecessor();
     //testFindInorderSuccessor();
-    testInsertAnElementRecursive();
+    //testInsertAnElementRecursive();
+    testInsertAnElementIterative();
     return 0;
 }
 
