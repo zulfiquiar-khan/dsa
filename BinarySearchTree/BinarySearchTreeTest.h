@@ -105,3 +105,10 @@ void testFindMaximumElementRecursive(){
     if(min==NULL)printf("Tree is empty\n");
     else printf("Min : %d \n",min->data);
 }
+
+void testFindMaximumElementIterative(){
+    bstNode* root=createBstForTest();
+    bstNode* min=findMaximumElementIterative(root);
+    if(min==NULL)printf("Tree is empty\n");
+    else printf("Min : %d \n",min->data);
+}
