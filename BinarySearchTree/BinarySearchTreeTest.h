@@ -119,3 +119,10 @@ void testFindInorderPredecessor(){
     if(predecessor==NULL)printf("Not found\n");
     else printf("Predecessor : %d \n",predecessor->data);
 }
+
+void testFindInorderSuccessor(){
+    bstNode* root=createBstForTest();
+    bstNode* successor=findInorderSuccessor(root,root);
+    if(successor==NULL)printf("Not found\n");
+    else printf("Predecessor : %d \n",successor->data);
+}

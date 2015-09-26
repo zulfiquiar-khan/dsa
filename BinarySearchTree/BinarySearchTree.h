@@ -51,3 +51,11 @@ bstNode* findInorderPredecessor(bstNode* root,bstNode* element){
     bstNode* predecessor=findMaximumElementIterative(found->left);
     return predecessor;
 }
+
+bstNode* findInorderSuccessor(bstNode* root,bstNode* element){
+    if(root==NULL||element==NULL)return NULL;
+    bstNode* found=findAnElementIterative(root,element->data);
+    if(found==NULL)return NULL;
+    bstNode* successor=findMinimumElementIterative(found->right);
+    return successor;
+}
