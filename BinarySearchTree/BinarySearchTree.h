@@ -32,3 +32,9 @@ bstNode* findMinimumElementIterative(bstNode* root){
     while(root!=NULL&&root->left!=NULL){root=root->left;}
     return root;
 }
+
+
+bstNode* findMaximumElementRecursive(bstNode* root){
+    if(root->right==NULL||root==NULL)return root;
+    else findMaximumElementRecursive(root->right);
+}
