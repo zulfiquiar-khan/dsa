@@ -85,3 +85,10 @@ void testFindAnElementIterative(){
     else printf("Not Found\n");
 }
 
+void testFindMinimumElementRecursive(){
+    bstNode* root=createBstForTest();
+    bstNode* min=findMinimumElementRecursive(root);
+    if(min==NULL)printf("Tree is empty\n");
+    else printf("Min : %d \n",min->data);
+}
+
