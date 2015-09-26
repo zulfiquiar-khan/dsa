@@ -10,7 +10,9 @@ int main(int argc, char **argv)
     //testFindInorderPredecessor();
     //testFindInorderSuccessor();
     //testInsertAnElementRecursive();
-    testInsertAnElementIterative();
+    //testInsertAnElementIterative();
+    testDeleteRecursive();
+    
     return 0;
 }
 

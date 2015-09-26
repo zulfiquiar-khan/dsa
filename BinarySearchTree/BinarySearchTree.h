@@ -121,3 +121,23 @@ void traverseInorder(bstNode* root){
     printf("%d ",root->data);
     traverseInorder(root->right);
 }
+
+bstNode* deleteRecursive(bstNode* root,int data){
+    if(root==NULL){return NULL;}
+    bstNode* temp=NULL;
+    if(root->data<data){root->right=deleteRecursive(root->right,data);}
+    else if(root->data>data){root->left=deleteRecursive(root->left,data);}
+    else{
+        if(root->left!=NULL && root->right!=NULL){
+            temp=findMaximumElementIterative(root->left);
+            root->data=temp->data;
+            root->left=deleteRecursive(root->left,root->data);
+        }
+        else{
+            if(root->left==NULL&&root->right==NULL){return NULL;}
+            if(root->left==NULL)return root->right;
+            if(root->right==NULL)return root->left;
+        }
+    }
+    return root;
+}

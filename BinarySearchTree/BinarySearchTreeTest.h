@@ -140,3 +140,14 @@ void testInsertAnElementIterative(){
      traverseInorder(root);
      printf("\n");
 }
+
+void testDeleteRecursive(){
+    bstNode* root=createBstForTest();
+    printf("Before Delete :   ");
+    traverseInorder(root);
+    printf("\n");
+    deleteRecursive(root,4);
+    printf("After   Delete :   ");
+    traverseInorder(root);
+    printf("\n");
+}
