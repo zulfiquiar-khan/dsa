@@ -112,3 +112,10 @@ void testFindMaximumElementIterative(){
     if(min==NULL)printf("Tree is empty\n");
     else printf("Min : %d \n",min->data);
 }
+
+void testFindInorderPredecessor(){
+    bstNode* root=createBstForTest();
+    bstNode* predecessor=findInorderPredecessor(root,root);
+    if(predecessor==NULL)printf("Not found\n");
+    else printf("Predecessor : %d \n",predecessor->data);
+}

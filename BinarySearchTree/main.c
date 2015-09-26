@@ -6,7 +6,8 @@ int main(int argc, char **argv)
 	//testFindAnElementIterative();
     //testFindMinimumElementRecursive();
     //testFindMinimumElementIterative();
-    testFindMaximumElementRecursive();
+    //testFindMaximumElementRecursive();
+    testFindInorderPredecessor();
     
     return 0;
 }

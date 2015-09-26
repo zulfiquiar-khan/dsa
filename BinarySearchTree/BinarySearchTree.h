@@ -43,3 +43,11 @@ bstNode* findMaximumElementIterative(bstNode* root){
     while(root!=NULL&&root->right!=NULL){root=root->right;}
     return root;
 }
+
+bstNode* findInorderPredecessor(bstNode* root,bstNode* element){
+    if(root==NULL||element==NULL)return NULL;
+    bstNode* found=findAnElementIterative(root,element->data);
+    if(found==NULL)return NULL;
+    bstNode* predecessor=findMaximumElementIterative(found->left);
+    return predecessor;
+}
