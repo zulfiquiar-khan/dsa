@@ -4,7 +4,8 @@ int main(int argc, char **argv)
 {
     //testFindAnElementRecursive();
 	//testFindAnElementIterative();
-    testFindMinimumElementRecursive();
+    //testFindMinimumElementRecursive();
+    testFindMinimumElementIterative();
     
     return 0;
 }

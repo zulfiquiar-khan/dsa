@@ -27,3 +27,8 @@ bstNode* findMinimumElementRecursive(bstNode* root){
     if(root->left==NULL||root==NULL)return root;
     else findMinimumElementRecursive(root->left);
 }
+
+bstNode* findMinimumElementIterative(bstNode* root){
+    while(root!=NULL&&root->left!=NULL){root=root->left;}
+    return root;
+}
