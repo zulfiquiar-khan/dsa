@@ -170,3 +170,28 @@ void testBuildBinarySearchTree(){
     traverseInorder(root);
     printf("\n");
 }
+
+void testLowestCommonAncestorIterative(){
+    int element[]={11,2,6,4,5,16,13,8,19,0};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    bstNode* ancestor=NULL;
+    ancestor=lowestCommonAncestorIterative(root,0,19);
+    printf("Ancestor (%d,%d): %d\n",0,19,(ancestor!=NULL)?ancestor->data:-1);
+    ancestor=lowestCommonAncestorIterative(root,5,13);
+    printf("Ancestor (%d,%d): %d\n",5,13,(ancestor!=NULL)?ancestor->data:-1);
+    ancestor=lowestCommonAncestorIterative(root,5,8);
+    printf("Ancestor (%d,%d): %d\n",5,8,(ancestor!=NULL)?ancestor->data:-1);
+    ancestor=lowestCommonAncestorIterative(root,4,6);
+    printf("Ancestor (%d,%d): %d\n",4,6,(ancestor!=NULL)?ancestor->data:-1);
+    ancestor=lowestCommonAncestorIterative(root,16,19);
+    printf("Ancestor (%d,%d): %d\n",16,19,(ancestor!=NULL)?ancestor->data:-1);
+    ancestor=lowestCommonAncestorIterative(root,0,21);
+    printf("Ancestor (%d,%d): %d\n",0,21,(ancestor!=NULL)?ancestor->data:-1);
+   }

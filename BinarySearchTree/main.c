@@ -13,7 +13,8 @@ int main(int argc, char **argv)
     //testInsertAnElementIterative();
     //testDeleteRecursive();
     //testDeleteIterative();
-    testBuildBinarySearchTree();
+    //testBuildBinarySearchTree();
+    testLowestCommonAncestorIterative();
     
     return 0;
 }

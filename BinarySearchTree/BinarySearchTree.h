@@ -122,6 +122,15 @@ void traverseInorder(bstNode* root){
     traverseInorder(root->right);
 }
 
+void traversePreorder(bstNode* root){
+    if(root==NULL){
+        return;
+    }
+    printf("%d ",root->data);
+    traversePreorder(root->left);
+    traversePreorder(root->right);
+}
+
 bstNode* deleteRecursive(bstNode* root,int data){
     if(root==NULL){return NULL;}
     bstNode* temp=NULL;
@@ -193,4 +202,17 @@ bstNode* buildBinarySearchTree(int element[],int length){
         i++;
     }
     return root;
+}
+
+bstNode* lowestCommonAncestorIterative(bstNode* root,int a,int b){
+    if(root==NULL)return NULL;
+    bstNode* node1=findAnElementIterative(root,a);
+    bstNode* node2=findAnElementIterative(root,b);
+    if(node1==NULL||node2==NULL)return NULL;
+    while(1){
+        if(root->data<=b&&root->data>=a)return root;
+        else if(root->data<b && root->data<a)root=root->right;
+        else root=root->left;
+    }
+    return NULL;
 }
