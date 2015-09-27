@@ -162,3 +162,11 @@ void testDeleteIterative(){
     traverseInorder(root);
     printf("\n");
 }
+
+void testBuildBinarySearchTree(){
+    int element[]={11,2,6,4,5,16,13,8,19,0};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    traverseInorder(root);
+    printf("\n");
+}

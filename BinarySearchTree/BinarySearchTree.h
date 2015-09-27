@@ -182,3 +182,15 @@ void setPreviousNode(bstNode* prev,bstNode* root,int flag){
     if(flag==0)prev->left=root;
     else prev->right=root;
 }
+
+bstNode* buildBinarySearchTree(int element[],int length){
+    bstNode* root=(bstNode*)malloc(sizeof(bstNode));
+    root->left=root->right=NULL;
+    root->data=element[0];
+    int i=1;
+    while(i<length){
+        insertAnElementIterative(root,element[i]);
+        i++;
+    }
+    return root;
+}
