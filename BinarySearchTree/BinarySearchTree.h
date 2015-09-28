@@ -216,3 +216,27 @@ bstNode* lowestCommonAncestorIterative(bstNode* root,int a,int b){
     }
     return NULL;
 }
+
+bstNode* lowestCommonAncestorRecursive(bstNode* root,int  a,int  b){
+    if(root==NULL)return root;
+    if(root->data<=b&&root->data>=a){
+        return root;
+    }
+    if(root->data<b&&root->data<a){
+        return lowestCommonAncestorRecursive(root->right,a,b);
+    }
+    if(root->data>b&&root->data>a){
+        return lowestCommonAncestorRecursive(root->left,a,b);
+    }
+}
+
+bstNode* lowestCommonAncestorRecursiveInterface(bstNode* root,int a,int b){
+    bstNode* found1=findAnElementIterative(root,a);
+    bstNode* found2=findAnElementIterative(root,b);
+    if(found1==NULL||found2==NULL){
+        return NULL;
+    }
+    else{
+        return lowestCommonAncestorRecursive(root,a,b);
+    }
+}
