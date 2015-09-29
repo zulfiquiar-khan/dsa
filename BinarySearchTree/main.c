@@ -15,7 +15,9 @@ int main(int argc, char **argv)
     //testDeleteIterative();
     //testBuildBinarySearchTree();
     //testLowestCommonAncestorIterative();
-    testLowestCommonAncestorRecursive();
+    //testLowestCommonAncestorRecursive();
+    testIsBSTMaxMinStrategy();
+    //testIsBSTSingleScanStrategy();
     
     return 0;
 }

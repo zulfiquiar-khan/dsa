@@ -207,33 +207,33 @@ void testLowestCommonAncestorIterative(){
     printf("Preorder : ");
     traversePreorder(root);
     printf("\n");
-    int afound=0;
-    int bfound=0;
     bstNode* ancestor=NULL;
     ancestor=lowestCommonAncestorRecursiveInterface(root,0,19);
     printf("Ancestor (%d,%d): %d\n",0,19,(ancestor!=NULL)?ancestor->data:-1);
-    afound=0;
-    bfound=0;
     ancestor=lowestCommonAncestorRecursiveInterface(root,5,13);
     printf("Ancestor (%d,%d): %d\n",5,13,(ancestor!=NULL)?ancestor->data:-1);
-    afound=0;
-    bfound=0;
-
     ancestor=lowestCommonAncestorRecursiveInterface(root,5,8);
     printf("Ancestor (%d,%d): %d\n",5,8,(ancestor!=NULL)?ancestor->data:-1);
-    afound=0;
-    bfound=0;
-
     ancestor=lowestCommonAncestorRecursiveInterface(root,4,6);
     printf("Ancestor (%d,%d): %d\n",4,6,(ancestor!=NULL)?ancestor->data:-1);
-    afound=0;
-    bfound=0;
-
     ancestor=lowestCommonAncestorRecursiveInterface(root,16,19);
     printf("Ancestor (%d,%d): %d\n",16,19,(ancestor!=NULL)?ancestor->data:-1);
-    afound=0;
-    bfound=0;
-
     ancestor=lowestCommonAncestorRecursiveInterface(root,0,21);
     printf("Ancestor (%d,%d): %d\n",0,21,(ancestor!=NULL)?ancestor->data:-1);
-   }
+}
+
+void testIsBSTMaxMinStrategy(){
+    int element[]={11,2,6,4,5,16,13,8,19,0};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    printf("Is Binary Search Tree : %d\n",isBSTMaxMinStrategy(root));
+    root->data=1;
+    printf("Is Binary Search Tree : %d\n",isBSTMaxMinStrategy(root));
+}
+

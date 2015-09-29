@@ -240,3 +240,16 @@ bstNode* lowestCommonAncestorRecursiveInterface(bstNode* root,int a,int b){
         return lowestCommonAncestorRecursive(root,a,b);
     }
 }
+
+int isBSTMaxMinStrategy(bstNode* root){
+    if(root==NULL)return 1;
+    bstNode* minNode=findMinimumElementIterative(root->right);
+    bstNode* maxNode=findMaximumElementIterative(root->left);
+    int min=1000;
+    int max=-1000;
+    if(minNode!=NULL)min=minNode->data;
+    if(maxNode!=NULL)max=maxNode->data;
+    if(root->data>max &&root->data<min){return isBSTMaxMinStrategy(root->left)&&isBSTMaxMinStrategy(root->right);}
+    else{return 0;}
+}
+
