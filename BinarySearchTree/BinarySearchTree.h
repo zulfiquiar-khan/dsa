@@ -253,3 +253,18 @@ int isBSTMaxMinStrategy(bstNode* root){
     else{return 0;}
 }
 
+int isBSTSingleScanStrategy(bstNode* root,int min,int max){
+    if(root==NULL)return 1;
+    return (root->data>min&&
+                root->data<max &&
+                isBSTSingleScanStrategy(root->left,min,root->data) &&
+                isBSTSingleScanStrategy(root->right,root->data,max));
+}
+
+int isBstInorderStartegy(bstNode* root,int * prev){
+    if(root==NULL)return 1;
+    if(!isBstInorderStartegy(root,prev)) return 0;
+    if(root->data<*prev) return 0;
+    *prev=root->data;
+    return isBstInorderStartegy(root->right,prev);
+}

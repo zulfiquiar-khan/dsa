@@ -237,3 +237,33 @@ void testIsBSTMaxMinStrategy(){
     printf("Is Binary Search Tree : %d\n",isBSTMaxMinStrategy(root));
 }
 
+void testIsBSTSingleScanStrategy(){
+    int element[]={11,2,6,4,5,16,13,8,19,0};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    printf("Is Binary Search Tree : %d\n",isBSTSingleScanStrategy(root,-1000,1000));
+    root->data=1;
+    printf("Is Binary Search Tree : %d\n",isBSTSingleScanStrategy(root,-1000,1000));
+}
+
+void testIsBSTinorderStrategy(){
+    int element[]={11,2,6,4,5,16,13,8,19,0};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    printf("Is Binary Search Tree : %d\n",isBstInorderStartegy(root,-1000));
+    root->data=1;
+    printf("Is Binary Search Tree : %d\n",isBstInorderStartegy(root,-1000));
+}
+
