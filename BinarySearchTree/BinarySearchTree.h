@@ -268,3 +268,28 @@ int isBstInorderStartegy(bstNode* root,int * prev){
     *prev=root->data;
     return isBstInorderStartegy(root->right,prev);
 }
+
+bstNode* convertBinarySearchTreeToCircularDoublyLinkedList(bstNode* root){
+    bstNode* head=NULL;
+    bstNode* prev=NULL;
+    bstToCdll(root,&head,&prev);
+    return head;
+}
+
+void bstToCdll(bstNode* root,bstNode** head ,bstNode** prev){
+    bstNode* right=NULL;
+    if(root==NULL)return NULL;
+    bstToCdll(root->left,head,prev);
+    root->left=*prev;
+    if(*prev==NULL){
+       *head=root; 
+    }
+    else{
+        (*prev)->right=root;
+    }
+    right=root->right;
+    (*head)->left=root;
+    root->right=*head;    
+    *prev=root;
+    bstToCdll(right,head,prev);
+}
