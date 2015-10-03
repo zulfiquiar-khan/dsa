@@ -310,3 +310,30 @@ void testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming(){
 }
 
 
+void testConvertDoubliLinkedListToBinarySearchTree(){
+    bstNode* head=(bstNode*)malloc(sizeof(bstNode));
+    bstNode* newNode1=(bstNode*)malloc(sizeof(bstNode));
+    bstNode* newNode2=(bstNode*)malloc(sizeof(bstNode));
+    
+    newNode2->data=16;
+    newNode2->right=NULL;
+    newNode2->left=newNode1;
+    
+    newNode1->data=11;
+    newNode1->right=newNode2;
+    newNode1->left=head;
+    
+    head->data=2;
+    head->left=NULL;
+    head->right=newNode1;
+    
+     bstNode* root=convertDllToBst(head);
+     printf("Inorder : ");
+     traverseInorder(root);
+     printf("\n");
+     printf("Pre order : ");
+     traversePreorder(root);
+     printf("\n");
+}
+
+

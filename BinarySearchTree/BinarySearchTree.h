@@ -8,6 +8,8 @@ struct BinarySearchTreeNode{
 
 typedef struct BinarySearchTreeNode bstNode;
 
+bstNode* findMiddleNode(bstNode*);
+
 bstNode* findAnElementRecursive(bstNode* root,int data){
     if(root==NULL||root->data==data) return root;
     else if(root->data>data) findAnElementRecursive(root->left,data);
@@ -327,3 +329,40 @@ bstNode* bstToCdllDp(bstNode* root){
     return aList;
 }
 
+bstNode* convertDllToBst(bstNode* head){
+    if(head==NULL)return NULL;
+    bstNode* root=findMiddleNode(head);
+    if(root==NULL)return NULL;
+    bstNode* left=NULL;
+    bstNode* right=NULL;
+    
+    if(root->left!=NULL){
+        root->left->right=NULL;
+    }
+    if(root->right!=NULL){
+        root->right->left=NULL;
+    }
+    left=convertDllToBst(root->left);
+    right=convertDllToBst(root->right);
+    root->left=left;
+    root->right=right;
+    return root;
+}
+
+bstNode* findMiddleNode(bstNode* head){
+    bstNode* slowPtr=head;
+    bstNode* fastPtr=head;
+    
+    if(head==NULL){
+        return NULL;
+    }
+    
+    while(fastPtr->right!=NULL){
+        fastPtr=fastPtr->right;
+        if(fastPtr->right!=NULL){
+            slowPtr=slowPtr->right;
+            fastPtr=fastPtr->right;
+            }
+    }
+    return slowPtr;
+}

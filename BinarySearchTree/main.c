@@ -19,7 +19,8 @@ int main(int argc, char **argv)
     //testIsBSTMaxMinStrategy();
     //testIsBSTSingleScanStrategy();
     //testConvertBinarySearchTreeToCircularDoublyLinkedList();
-    testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming();
+    //testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming();
+    testConvertDoubliLinkedListToBinarySearchTree();
     
     return 0;
 }
