@@ -293,3 +293,37 @@ void bstToCdll(bstNode* root,bstNode** head ,bstNode** prev){
     *prev=root;
     bstToCdll(right,head,prev);
 }
+
+bstNode* append(bstNode* a,bstNode* b){
+    bstNode* aLast=NULL;
+    bstNode* bLast=NULL;
+    if(a==NULL)return b;
+    if(b==NULL)return a;
+    aLast=a->left;
+    bLast=b->left;
+    
+    aLast->right=b;
+    a->left=bLast;
+    
+    bLast->right=a;
+    b->left=aLast;
+    
+    return a;
+}
+
+bstNode* bstToCdllDp(bstNode* root){
+    bstNode* aList=NULL;
+    bstNode* bList=NULL;
+    if(root==NULL)return NULL;
+    aList=bstToCdllDp(root->left);
+    bList=bstToCdllDp(root->right);
+    
+    root->left=root;
+    root->right=root;
+    
+    aList=append(aList,root);
+    aList=append(aList,bList);
+    
+    return aList;
+}
+

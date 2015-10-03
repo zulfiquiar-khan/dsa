@@ -287,3 +287,26 @@ void testConvertBinarySearchTreeToCircularDoublyLinkedList(){
     }while(temp!=head);
     printf("\n");
 }
+
+
+void testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming(){
+    int element[]={11,16,2};
+    int length=3;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    
+    bstNode* head=bstToCdllDp(root);
+    bstNode* temp=head;
+    do{
+        printf("%d ",temp->data);
+        temp=temp->right;
+    }while(temp!=head);
+    printf("\n");
+}
+
+
