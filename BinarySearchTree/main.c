@@ -20,7 +20,8 @@ int main(int argc, char **argv)
     //testIsBSTSingleScanStrategy();
     //testConvertBinarySearchTreeToCircularDoublyLinkedList();
     //testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming();
-    testConvertDoubliLinkedListToBinarySearchTree();
+    //testConvertDoubliLinkedListToBinarySearchTree();
+    testConvertSortedArrayToBst();
     
     return 0;
 }

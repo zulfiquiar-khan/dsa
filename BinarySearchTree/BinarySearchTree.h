@@ -366,3 +366,20 @@ bstNode* findMiddleNode(bstNode* head){
     }
     return slowPtr;
 }
+
+bstNode* convertSortedArrayToBst(int array[],int start,int end){
+    if(end<start){
+        return NULL;
+    }
+    bstNode* left=NULL;
+    bstNode* right=NULL;
+    int mid=(start+end)/2;
+    bstNode* root=(bstNode*)malloc(sizeof(bstNode));
+    root->data=array[mid];
+    left=convertSortedArrayToBst(array,start,mid-1);
+    right=convertSortedArrayToBst(array,mid+1,end);
+    root->left=left;
+    root->right=right;
+    
+    return root;
+}

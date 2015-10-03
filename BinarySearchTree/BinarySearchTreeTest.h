@@ -336,4 +336,15 @@ void testConvertDoubliLinkedListToBinarySearchTree(){
      printf("\n");
 }
 
+void testConvertSortedArrayToBst(){
+    int array[]={1,2,3};
+    bstNode* root=convertSortedArrayToBst(array,0,2);
+     printf("Inorder : ");
+     traverseInorder(root);
+     printf("\n");
+     printf("Pre order : ");
+     traversePreorder(root);
+     printf("\n");
+}
+
 
