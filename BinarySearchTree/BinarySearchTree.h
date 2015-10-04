@@ -1,4 +1,5 @@
 #include<stdlib.h>
+#include"../LinkedList/SinglyLinkedList.h"
 
 struct BinarySearchTreeNode{
     int data;
@@ -382,4 +383,16 @@ bstNode* convertSortedArrayToBst(int array[],int start,int end){
     root->right=right;
     
     return root;
+}
+
+bstNode* sortedListToBst(struct singlyNode** list ,int start,int end){
+    if(start>end)return NULL;
+    int mid=start+(end-start)/2;
+    bstNode* left=sortedListToBst(list,start,mid-1);
+    bstNode* parent=(bstNode*)malloc(sizeof(bstNode));
+    parent->left=left;
+    parent->data=(*list)->data;
+    (*list)=(*list)->next;
+    parent->right=sortedListToBst(list,mid+1,end);
+    return parent;
 }

@@ -21,7 +21,8 @@ int main(int argc, char **argv)
     //testConvertBinarySearchTreeToCircularDoublyLinkedList();
     //testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming();
     //testConvertDoubliLinkedListToBinarySearchTree();
-    testConvertSortedArrayToBst();
+    //testConvertSortedArrayToBst();
+    testSortedListToBst();
     
     return 0;
 }

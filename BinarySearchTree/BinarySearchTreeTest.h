@@ -347,4 +347,22 @@ void testConvertSortedArrayToBst(){
      printf("\n");
 }
 
+void testSortedListToBst(){
+    struct singlyNode* list=NULL;
+    insert(&list,1,1);
+    insert(&list,2,2);
+    insert(&list,3,3);
+    insert(&list,4,4);
+    insert(&list,5,5);
+    insert(&list,6,6);
+    insert(&list,7,7);
+    bstNode* root=sortedListToBst(&list,0,6);
+     printf("Inorder : ");
+     traverseInorder(root);
+     printf("\n");
+     printf("Pre order : ");
+     traversePreorder(root);
+     printf("\n");
+}
+
 
