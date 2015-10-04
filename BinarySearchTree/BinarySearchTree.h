@@ -396,3 +396,33 @@ bstNode* sortedListToBst(struct singlyNode** list ,int start,int end){
     parent->right=sortedListToBst(list,mid+1,end);
     return parent;
 }
+
+bstNode* findKthSmallestelement(bstNode* root,int k,int* count){
+    if(root==NULL)return NULL;
+    bstNode* left=findKthSmallestelement(root->left,k,count);
+    if(left!=NULL)return left;
+    (*count)=(*count)+1;
+    if(*count==k) return root;
+    return findKthSmallestelement(root->right,k,count);
+}
+
+bstNode* floor(bstNode* root,int k,bstNode** prev){
+    if(root==NULL) return NULL;
+    bstNode* left=floor(root->left,k,prev);
+    if(left!=NULL) return left;
+    if(root->data>k)return (*prev);
+    if(root->data==k) return root;
+    (*prev)=root;
+    return floor(root->right,k,prev);
+}
+
+
+bstNode* cieling(bstNode* root,int k,bstNode** prev){
+    if(root==NULL) return NULL;
+    bstNode* right=cieling(root->right,k,prev);
+    if(right!=NULL) return right;
+    if(root->data<k)return (*prev);
+    if(root->data==k) return root;
+    (*prev)=root;
+    return cieling(root->left,k,prev);
+}

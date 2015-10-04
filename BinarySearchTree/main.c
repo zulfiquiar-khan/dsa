@@ -22,7 +22,10 @@ int main(int argc, char **argv)
     //testConvertBinarySearchTreeToCircularDoublyLinkedListDynamicProgramming();
     //testConvertDoubliLinkedListToBinarySearchTree();
     //testConvertSortedArrayToBst();
-    testSortedListToBst();
+    //testSortedListToBst();
+    //testFindKthSmallestelement();
+    //testFloor();
+    testCieling();
     
     return 0;
 }

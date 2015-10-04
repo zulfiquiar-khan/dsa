@@ -366,3 +366,65 @@ void testSortedListToBst(){
 }
 
 
+void testFindKthSmallestelement(){
+     int array[]={1,2,3,4,5,6,7};
+    bstNode* root=convertSortedArrayToBst(array,0,6);
+    int  count=0;
+    bstNode* result=findKthSmallestelement(root,3,&count);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+    count=0;
+    result=findKthSmallestelement(root,8,&count);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+}
+
+void testFloor(){
+    int element[]={11,2,6,4,5,16,13,8,19,1};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    bstNode* prev=NULL;
+    bstNode* result=floor(root,5,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+    prev=NULL;
+    result=floor(root,9,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+    
+    prev=NULL;
+    result=floor(root,10,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+}
+
+void testCieling(){
+    int element[]={11,2,6,4,5,16,13,8,19,1};
+    int length=10;
+    bstNode* root=buildBinarySearchTree(element,length);
+    printf("Inorder : ");
+    traverseInorder(root);
+    printf("\n");
+    printf("Preorder : ");
+    traversePreorder(root);
+    printf("\n");
+    bstNode* prev=NULL;
+    bstNode* result=cieling(root,5,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+    prev=NULL;
+    result=cieling(root,9,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+    
+    prev=NULL;
+    result=cieling(root,10,&prev);
+    if(result!=NULL)printf("Result : %d \n",result->data);
+    else printf("Not found\n");
+}
