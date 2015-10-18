@@ -4,6 +4,7 @@ int main(int argc, char **argv)
 {
     //testInsertAvlTree();
 	//testCreateFullBalanceBst();
-   testGenerateAVLTreeWithMinNodes();
+   //testGenerateAVLTreeWithMinNodes();
+    testIsBlancedBST();
     return 0;
 }

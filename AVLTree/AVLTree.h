@@ -126,3 +126,15 @@ avlNode* generateAVLTreeWithMinNodes(int h,int* count){
     return root;
 
 }
+
+int isBlancedBST(avlNode* root){
+    if(root==NULL) return 0;
+    int left=isBlancedBST(root->left);
+    if(left==-1) return left;
+    int right=isBlancedBST(root->right);
+    if(right==-1) return right;
+    if(abs(left-right)>1){
+        return -1;
+    }
+    return max(left,right)+1;
+}

@@ -38,3 +38,16 @@ void testGenerateAVLTreeWithMinNodes(){
     traversePreorder(root);
     printf("\n");
 }
+
+void testIsBlancedBST(){
+    int count=0;
+    avlNode* root=generateAVLTreeWithMinNodes(3,&count);
+    printf("Done creating AVL Tree\n");
+    traverseInorder(root);
+    printf("\n");
+    traversePreorder(root);
+    printf("\n");
+    printf("Is Blanced : %d\n",isBlancedBST(root));
+    root->right=NULL;
+    printf("Is Blanced : %d\n",isBlancedBST(root));
+}
