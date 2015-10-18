@@ -103,3 +103,26 @@ avlNode* insert(avlNode* root,avlNode* parent,int data){
     root->height=max(height(root->left),height(root->right))+1;
     return root;
 }
+
+avlNode* createFullBalanceBst(int h,int * count){
+    if(h==0) return NULL;
+    avlNode* root=(avlNode*)malloc(sizeof(avlNode));
+    root->height=h;
+    root->left=createFullBalanceBst(h-1,count);
+    root->data=(*count)+1;
+    *count=(*count)+1;
+    root->right=createFullBalanceBst(h-1,count);
+    return root;
+}
+
+avlNode* generateAVLTreeWithMinNodes(int h,int* count){
+        if(h<=0) return NULL;
+    avlNode* root=(avlNode*)malloc(sizeof(avlNode));
+    root->left=generateAVLTreeWithMinNodes(h-1,count);
+    root->data=(*count)+1;
+    *count=(*count)+1;
+    root->right=generateAVLTreeWithMinNodes(h-2,count);
+    root->height=h;
+    return root;
+
+}
