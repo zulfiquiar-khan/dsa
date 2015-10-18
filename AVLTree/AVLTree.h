@@ -138,3 +138,17 @@ int isBlancedBST(avlNode* root){
     }
     return max(left,right)+1;
 }
+
+void countNumberOfNodesInRange(avlNode* root,int a,int b,int* count){
+    if(root==NULL) return;
+    if(root->data>a){
+        countNumberOfNodesInRange(root->left,a,b,count);
+    }
+    if(root->data<b){
+        countNumberOfNodesInRange(root->right,a,b,count);
+    }
+    if(root->data>=a&&root->data<=b){
+        *count=(*count)+1;
+    }
+    return ;
+}

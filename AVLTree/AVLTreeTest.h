@@ -51,3 +51,19 @@ void testIsBlancedBST(){
     root->right=NULL;
     printf("Is Blanced : %d\n",isBlancedBST(root));
 }
+
+void testCountNumberOfNodesInRange(){
+    int count=0;
+    avlNode* root=createFullBalanceBst(3,&count);
+    printf("Done creating AVL Tree\n");
+    traverseInorder(root);
+    printf("\n");
+    traversePreorder(root);
+    printf("\n");
+    count=0;
+    countNumberOfNodesInRange(root,1,4,&count);
+    printf("Range Count [1,4] : %d \n",count);
+    count=0;
+    countNumberOfNodesInRange(root,4,6,&count);
+    printf("Range Count [4,6] : %d \n",count);
+}
