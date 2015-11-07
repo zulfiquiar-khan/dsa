@@ -5,6 +5,8 @@ int main(int argc, char **argv)
     //testInsertAvlTree();
 	//testCreateFullBalanceBst();
    //testGenerateAVLTreeWithMinNodes();
-    testIsBlancedBST();
+    //testIsBlancedBST();
+    testCountNumberOfNodesInRange();
+    
     return 0;
 }
